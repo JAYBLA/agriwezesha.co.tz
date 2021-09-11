@@ -1,0 +1,121 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block title %}
+    We connect and support small holder farmers
+{% endblock title %}
+
+
+{% block stylesheet %}
+    
+{% endblock stylesheet %}
+
+{% block content %}
+<section style="min-height: 120px;"></section>
+<section class="mt-5">
+    <div class="container py-5">
+        <h4 class="color-dark text-center">REQUEST A CALL BACK BY FILLING THE FORM BELOW</h4>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h4>CONTACT INFORMATIONS</h4>
+                        <div><span style="font-size:24px;"><b>Phone:</b></span><br>
+                          <strong>+255 620391936 / 
+                          +255 783124619</strong></div><br>
+                          <div>
+                            <span style="font-size:24px;"><b>Email:</b></span>
+                            <p>agriwezesha@gmail.com <br>
+                              info@agriwezesha.co.tz
+                            </p>
+                          </div>
+                          <div>
+                            <span style="font-size:24px;"><b>Postal address:</b></span>
+                            <p>Misongeni A, House number 341, P.O.BOX 344 MOROGORO, TANZANIA
+                            </p>
+                          </div>
+                          <div>
+                            <span style="font-size:24px;"><b>Office location:</b></span>
+                            <p>Office location:
+                            </p>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="" method="POST" id="AgriwezeshacontactForm">
+                            {% csrf_token %}
+                            {% for hidden in form.hidden_fields %}
+                            {{ hidden }}
+                            {% endfor %}
+                            <div class="form-group">
+                              <label><b>Your Name</b></label>
+                              {% render_field form.name class="form-control" %}
+                            </div>
+                            <div class="form-group">
+                              <label><b>Phone Number</b></label>
+                              {% render_field form.phone class="form-control" %}
+                            </div>
+                            <div class="form-group">
+                                <label><b>Email address</b></label>
+                                {% render_field form.email class="form-control" %}
+                              </div>
+                            <div class="form-group">
+                                <label><b>Subject</b></label>
+                                {% render_field form.subject class="form-control" %}
+                            </div>
+                            <div class="form-group">
+                                <label><b>Message</b></label>
+                                {% render_field form.message class="form-control" rows="5" %}
+                            </div>
+                            <button class="btn btn-primary rounded rounded-5" type="submit"><i class="fa fa-check-square-o"></i> Submit now</button>
+                          </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
+
+
+{% block javascript %}
+<script>
+    const form = document.getElementById('AgriwezeshacontactForm');
+    form.addEventListener('submit', submitHandler)
+
+    function submitHandler(e){
+      e.preventDefault();
+      $.ajax({
+        type:'POST',
+        url:"{% url 'main:contact_post' %}",
+        data:$("#AgriwezeshacontactForm").serialize(),
+        success: function(data){
+          if (data.msg == 'success'){
+            form.reset();
+            Swal.fire({
+              icon: 'success',
+                title: 'Submitted Successfully!',
+                text: 'We will contact you as soon as possible!',
+            })
+          }else{
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Something went wrong!',
+            })
+          }
+        }
+      })
+    }
+
+  </script>
+{% endblock javascript %}
+    
+    
+
+

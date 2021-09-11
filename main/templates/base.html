@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Agriwezesha-{% block title %}{% endblock title %}</title>
+    
+	<link rel="stylesheet" id="bootstrap-css" href="{% static 'css/bootstrap.css' %}" type="text/css" media="all">
+	<link rel="stylesheet" id="awesome-font-css" href="{% static 'css/font-awesome.css' %}" type="text/css" media="all">
+	<link rel="stylesheet" id="ionicon-font-css" href="{% static 'css/ionicon.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" id="royal-preload-css" href="{% static 'css/royal-preload.css' %}" type="text/css" media="all">
+	<link rel="stylesheet" id="slick-slider-css" href="{% static 'css/slick.css' %}" type="text/css" media="all">
+	<link rel="stylesheet" id="slick-theme-css" href="{% static 'css/slick-theme.css' %}" type="text/css" media="all">
+	<link rel="stylesheet" id="consultax-style-css" href="{% static 'style.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" id="consultax-style-css" href="{% static 'custom.css' %}" type="text/css" media="all">
+
+
+	<!-- RS5.0 Main Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="{% static 'revolution/css/settings.css' %}">
+
+    <!-- RS5.0 Layers and Navigation Styles -->
+    <link rel="stylesheet" type="text/css" href="{% static 'revolution/css/layers.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'revolution/css/navigation.css' %}">
+
+        <!-- Sweet alert -->
+  <link href="{% static 'css/sweetalert2.css' %}" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <link rel="shortcut icon" href="favicon.png">
+</head>
+<body class="royal_preloader">
+	<div id="page" class="site">
+
+    <header id="site-header" class="site-header header-transparent header-fixed sticky-header mobile-header-blue">
+        <!-- Main header start - Header Home-1, Default -->
+        {% include 'includes/top_bar.html' %}
+
+        <!-- Main header start -->
+        {% include 'includes/desktop_header.html' %}
+        <!-- Main header close -->
+
+        {% include 'includes/mobile_header.html' %}
+
+    </header>
+    <!-- #site-header -->
+
+    <div id="content" class="site-content">
+        
+        {% block slider %}
+            
+        {% endblock slider %}
+            
+        
+        {% block content %}
+           
+        {% endblock content %}
+            
+
+    </div>
+    <!-- #content -->
+
+    {% include 'includes/footer.html' %}
+    <!-- #site-footer -->
+</div>
+
+	{% include 'includes/scripts.html' %}
+	<script>
+        jQuery(document).ready(function () {
+            jQuery("#revolution-slider").revolution({
+                sliderType: "standard",
+                sliderLayout: 'fullscreen',
+                delay: 7500,
+                navigation: {
+                    arrows: { enable: true }
+                },
+                spinner: "off",
+                gridwidth: 1140,
+                gridheight: 700,
+                disableProgressBar: "on",
+                responsiveLevels:[1920,1024,768,481],gridwidth:[1170,768,481,300],gridheight:[700,700,700,700]
+            });
+        });
+    </script>
+
+    
+  <div id="google_translate_element" class="fixed-language-button shadow-lg rounded pb-2 bg-warning"><span class="ml-4" style="font-size: 14px !important;">Change Language</span></div>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({includedLanguages: 'en,sw,',layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL }, 
+   'google_translate_element');
+    }
+  </script>
+
+    <script src="{% static 'js/sweetalert2.js' %}"></script>
+
+    
+    {% block javascript %}
+        
+    {% endblock javascript %}
+        
+</body>
+</html>

@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+/* universal */
+.color-light{
+    color: #67a141 !important;
+}
+.bg-dark{
+    background-color: #173617 !important;
+}
+.color-dark{
+    color: #173617 !important;
+}
+
+.bg-middle{
+    background-color: #5b8d3d !important;
+}
+
+p{
+    font-size: 20px !important;
+    font-family: "Roboto", Sans-serif;
+    margin: 0 0 15px;
+}
+
+.what-we-do{
+    background-image: url('../static/images/what-we-do.png');
+    background-size: cover;
+    min-height: 91px;
+}
+
+.service-button{
+    border-style: double;
+    border-width: 6px 6px 6px 6px;
+    border-radius: 11px 11px 11px 11px;
+    border-color: #fff;
+}
+
+.service-column{
+    height: 100% !important;
+}
+
+.contact-image-container{
+    height: 600px !important;
+}
+
+.contact-image-container img{
+    height: 590px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.contact-image-container .card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 5px;
+}
+
+.swal2-styled.swal2-confirm {
+    border: 0;
+    border-radius: .25em;
+    background: initial;
+    background-color: #173617 !important;
+    color: #fff;
+    font-size: 1em;
+}
