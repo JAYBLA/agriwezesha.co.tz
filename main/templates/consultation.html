@@ -1,0 +1,91 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block title %}
+    We connect and support small holder farmers
+{% endblock title %}
+
+
+{% block stylesheet %}
+    
+{% endblock stylesheet %}
+
+{% block content %}
+<section style="min-height: 140px;"></section>
+<div class="page-header">
+    <div class="container">
+        <div class="breadc-box no-line">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="page-title">Financial Consulting</h1>
+                </div>
+                <div class="col-md-6 mobile-left text-right">
+                    <ul id="breadcrumbs" class="breadcrumbs none-style">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li class="active">Financial Consulting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="entry-content">
+    <div class="container">
+        <div class="row">
+            <aside id="sidebar" class="widget-area service-sidebar col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <section id="text-1" class="widget widget_text bg-second text-light" style="padding: 5px !important;">
+                    <img src="{% static 'images/consultation.jpg' %}" alt="" srcset="">
+                </section>
+            </aside>
+
+            <div id="primary" class="content-area col-lg-6 col-md-6 col-sm-12 col-xs-12 pull-right">
+                <main id="main" class="site-main">
+
+                    <article class="ot_service type-ot_service status-publish has-post-thumbnail hentry">
+                        <div class="inner-post">
+                            <section class="wpb_row row-fluid">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="wpb_column column_container col-sm-12">
+                                            <div class="column-inner">
+                                                <div class="wpb_wrapper">
+                                                    <div class="wpb_text_column wpb_content_element">
+                                                        <div class="wpb_wrapper">
+                                                            <p>
+                                                                Our management consulting services focus on our clients’ most critical issues and opportunities: strategy, marketing, organization, operations, technology, transformation, digital, advanced analytics, corporate finance, mergers & acquisitions and sustainability across all industries and geographies. <br>
+
+                                                                We bring deep, functional expertise, but are known for our holistic perspective: we capture value across boundaries and between the silos of any organization. <br>
+
+                                                                We have proven a multiplier effect from optimizing the sum of the parts, not just the individual pieces. 
+                                                            </p>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </article>
+
+                </main>
+                <!-- #main -->
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+
+{% block javascript %}
+{% endblock javascript %}
+    
+    
+
+

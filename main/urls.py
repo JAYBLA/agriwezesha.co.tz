@@ -21,5 +21,6 @@ urlpatterns = [
     path('team/', views.team,name='team'),
     path('testimonials/', views.testimonials,name='testimonials'),  
     path('trainings/', views.trainings,name='trainings'),  
-    path('vision-mission/', views.vision_mission,name='vision_mission'),      
+    path('vision-mission/', views.vision_mission,name='vision_mission'),
+    path('consultation/', views.consultation,name='consultation'),     
 ]

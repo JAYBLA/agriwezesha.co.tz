@@ -91,6 +91,11 @@ def volunteer(request):
     context = {}
     return render(request,template_name,context)
 
+def consultation(request):
+    template_name = 'consultation.html'
+    context = {}
+    return render(request,template_name,context)
+
 def contact(request):
     template_name = 'contact.html'
     form = ContactForm()

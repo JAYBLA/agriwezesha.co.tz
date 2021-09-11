@@ -506,7 +506,7 @@ a.the-title:hover {
 }
 
 .text-second {
-  color: #00387a;
+  color: #173617;
 }
 
 .section-padd {
@@ -774,7 +774,7 @@ a.the-title:hover {
   position: absolute;
   top: 0;
   left: 0;
-  background: #00387a;
+  background: #173617;
   opacity: 0.8;
   width: 100%;
   height: 100%;
@@ -1061,11 +1061,11 @@ a {
   -moz-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   -ms-transition: all 0.3s linear;
-  color: #00387a;
+  color: #173617;
   text-decoration: none;
 }
 a:visited {
-  color: #00387a;
+  color: #173617;
 }
 a:hover, a:focus, a:active {
   color: #336633;
@@ -1166,7 +1166,7 @@ ul.info-list.info_on_right_side li:last-child {
 /* ================================================== */
 /* Header Style Default */
 .site-header {
-  background: #00387a;
+  background: #173617;
   position: relative;
   z-index: 99;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
@@ -1518,7 +1518,7 @@ ul.info-list.info_on_right_side li:last-child {
   background-color: #fff;
 }
 .header-style-4 .header-topbar {
-  background-color: #00387a;
+  background-color: #173617;
 }
 .header-style-4 .main-navigation > ul > li > a, .header-style-4 .h-cart-btn i, .header-style-4 .toggle_search i {
   color: #000;
@@ -1526,7 +1526,7 @@ ul.info-list.info_on_right_side li:last-child {
 
 /* Header Style Blue */
 .header-blue {
-  background: #00387a;
+  background: #173617;
 }
 
 /* Header Style Transperant */
@@ -1583,7 +1583,7 @@ ul.info-list.info_on_right_side li:last-child {
   }
 
   .header-transparent.sticked {
-    background: #00387a;
+    background: #173617;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
     -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
@@ -1751,7 +1751,7 @@ ul.info-list.info_on_right_side li:last-child {
     left: 0;
     top: 50%;
     margin: -2px 0 0;
-    background: #00387a;
+    background: #173617;
     height: 4px;
     padding: 0;
     border: none;
@@ -1772,7 +1772,7 @@ ul.info-list.info_on_right_side li:last-child {
     top: -8px;
     width: 26px;
     height: 4px;
-    background: #00387a;
+    background: #173617;
     -webkit-transform-origin: 1.5px center;
     transform-origin: 1.5px center;
     transition: all 0.3s ease;
@@ -1790,7 +1790,7 @@ ul.info-list.info_on_right_side li:last-child {
     bottom: -8px;
     width: 26px;
     height: 4px;
-    background: #00387a;
+    background: #173617;
     -webkit-transform-origin: 1.5px center;
     transform-origin: 1.5px center;
     transition: all 0.3s ease;
@@ -1990,7 +1990,7 @@ ul.info-list.info_on_right_side li:last-child {
 }
 /* Blue Color */
 .mobile-header-blue .header_mobile .mlogo_wrapper {
-  background-color: #00387a;
+  background-color: #173617;
 }
 
 .mobile-header-blue #mmenu_toggle button, .mobile-header-blue #mmenu_toggle button:before, .mobile-header-blue #mmenu_toggle button:after {
@@ -2002,7 +2002,7 @@ ul.info-list.info_on_right_side li:last-child {
 }
 
 .mobile-header-blue .header_mobile .mobile_nav {
-  background-color: #00387a;
+  background-color: #173617;
   border-top-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -2048,7 +2048,7 @@ ul.info-list.info_on_right_side li:last-child {
 ## Page Header
 --------------------------------------------------------------*/
 .page-header {
-  background: url(https://via.placeholder.com/1920x614?text=backgroud+page+header+1920x620) no-repeat center center;
+  background: url(images/breadcrumb.png) no-repeat center center;
   background-size: cover;
 }
 .page-title{
@@ -2281,8 +2281,8 @@ ul.info-list.info_on_right_side li:last-child {
   line-height: 1.1;
 }
 .content-area .inner-post .post-link:hover {
-  color: #00387a;
-  border-color: #00387a;
+  color: #173617;
+  border-color: #173617;
 }
 .content-area .ot_service .inner-post {
   padding-top: 30px;
@@ -2517,7 +2517,7 @@ ul.info-list.info_on_right_side li:last-child {
   font-size: 18px;
 }
 .widget-area .widget.bg-second {
-  background: #00387a;
+  background: #173617;
 }
 .widget-area .widget.bg-second .btn:hover,
 .widget-area .widget.bg-second .btn:focus {
@@ -2973,7 +2973,7 @@ object {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 .service-box.hover-box:hover {
-  background: #00387a;
+  background: #173617;
   color: #fff;
 }
 .service-box.hover-box:hover h4 {
@@ -3094,7 +3094,7 @@ a .service-box {
   left: 40px;
 }
 .menu-service .list-service {
-  background: #00387a;
+  background: #173617;
 }
 .menu-service .list-service a {
   font-family: "Montserrat", sans-serif;
@@ -3113,7 +3113,7 @@ a .service-box {
 }
 .menu-service .call-action {
   padding: 67px 40px;
-  background-color: #00387a;
+  background-color: #173617;
   background-size: cover;
   background-position: center center;
 }
@@ -3915,7 +3915,7 @@ a .service-box {
 }
 .fun-facts.s2 .icon-fact i {
   background: #e5eef6;
-  color: #00387a;
+  color: #173617;
 }
 .fun-facts.s2 h5 {
   color: #fff;
@@ -3927,7 +3927,7 @@ a .service-box {
 
 .career-box > h5 {
   padding: 15px 40px;
-  background: #00387a;
+  background: #173617;
   color: #fff;
   margin-bottom: 0;
 }
@@ -4897,7 +4897,7 @@ div.line-chart .chart-legend li {
   color: #00a651;
 }
 .blue{
-  color: #00387a;
+  color: #173617;
 }
 .custom-padd-1{
   padding-top: 300px;
@@ -4946,10 +4946,10 @@ div.line-chart .chart-legend li {
 }
 .banner-content h6{
   margin-bottom: 10px;
-  color: #00387a;
+  color: #173617;
 }
 .banner-content h2{
-  color: #00387a;
+  color: #173617;
 }
 .banner-content p{
   margin-bottom: 35px;
