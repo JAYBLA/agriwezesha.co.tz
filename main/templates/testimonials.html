@@ -4,7 +4,7 @@
 {% load widget_tweaks %}
 
 {% block title %}
-    We connect and support small holder farmers
+    {{title}}
 {% endblock title %}
 
 
@@ -13,8 +13,76 @@
 {% endblock stylesheet %}
 
 {% block content %}
-<section style="min-height: 200px;"></section>
-<h1>testimonials</h1>
+<section style="min-height: 140px;"></section>
+<div class="page-header">
+    <div class="container">
+        <div class="breadc-box no-line">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="page-title">{{title}}</h1>
+                </div>
+                <div class="col-md-6 mobile-left text-right">
+                    <ul id="breadcrumbs" class="breadcrumbs none-style">
+                        <li><a href="/">Home</a></li>
+                        <li class="active text-light">{{title}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h1 style="padding-top: 5% !important;" class="text-center"><span class="page-headings text-uppercase">TESTIMONIALS</span></h1>
+    <hr class="divider-icon">
+</div>
+
+<section class="wpb_row row-fluid row-o-equal-height row-flex section-padd no-bot">
+  <div class="container">
+      <div class="row">
+          <div class="wpb_column column_container col-sm-6 col-md-6">
+              <div class="column-inner custom_1553248011584">
+                  <div class="wpb_wrapper">
+                      <div class="testi-item single ">
+                          <div class="testi-head">
+                              <img width="50" height="50" src="{% static 'images/yash.jpg' %}" alt="">
+                              <h5>Hoolash Vikrayansh Yash<span class="font12 normal">from Mauritus</span></h5>
+                          </div>
+                          <div class="line"></div>
+                          <div class="testi-content">
+                              <i class="ion-md-quote"></i>                            
+                              <p>
+                                " I am currently a student of MSc in Investment & Risk Finance. I got the opportunity to experience online volunteering with Agriwezesha (Tanzania) for 1.5 weeks.My projects included proposal writing for Hydroponics and supporting in setting up social media accounts for Agriwezesha. It was my first time working with a foreign NGO and to be honest, it was a wonderful experience. I truly believe it is an organisation that needs to be known and appreciated for all the future plans and good works they are doing for the welfare of Tanzanians. I received all the relevant information together with pictures in real-time which facilitated with works. I have interacted with Ms Deograsia Ignas who is a very calm, understanding and helpful person. I am sure that she will bring Agriwezesha to great heights with her skills and ideas. I am ready to contribute to this promising NGO and hope to keep in touch with it.  I wish her and Agriwezesha all the best for its future endeavours. "</p>
+                          </div>
+                      </div>
+          <div class="empty_space_30"></div>
+                  </div>
+              </div>
+          </div>
+          <div class="wpb_column column_container col-sm-6 col-md-6">
+              <div class="column-inner custom_1553247843085">
+                  <div class="wpb_wrapper">
+                      <div class="testi-item single ">
+                          <div class="testi-head">
+                              <img width="50" height="50" src="{% static 'images/dp.png' %}" alt="">
+                              <h5>Abhipsa<span class="font12 normal">from India</span></h5>
+                          </div>
+                          <div class="line"></div>
+                          <div class="testi-content">
+                              <i class="ion-md-quote"></i>
+                              <p>
+                                I volunteered for almost a month with Agriwezesha on Website Content Updation. I converted the work being done by the team into presentable words which is now live on the website. It was an extremely enriching experience where I was given the freedom to bring in new ideas.I could learn a lot regarding website design and content updation while working on this project.The team was immensely helpful in providing all the necessary information and collaborating with the implementation. My message to all future volunteers & interns "Give your best. The project will not only add value to your profile but will enhance your personality. Learnings are immense. You just need to take the plunge. Experience the joy of noble service through volunteering."
+                                Abhipsa
+                                India</p>
+                          </div>
+                      </div>
+          <div class="empty_space_30"></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
 {% endblock content %}
 
 

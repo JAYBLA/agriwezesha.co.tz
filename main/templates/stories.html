@@ -4,7 +4,7 @@
 {% load widget_tweaks %}
 
 {% block title %}
-    We connect and support small holder farmers
+    {{title}}
 {% endblock title %}
 
 
@@ -13,8 +13,93 @@
 {% endblock stylesheet %}
 
 {% block content %}
-<section style="min-height: 200px;"></section>
-<h1>stories</h1>
+<section style="min-height: 140px;"></section>
+<div class="page-header">
+    <div class="container">
+        <div class="breadc-box no-line">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="page-title">{{title}}</h1>
+                </div>
+                <div class="col-md-6 mobile-left text-right">
+                    <ul id="breadcrumbs" class="breadcrumbs none-style">
+                        <li><a href="/">Home</a></li>
+                        <li class="active text-light">{{title}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h1 style="padding-top: 5% !important;" class="text-center"><span class="page-headings text-uppercase">STORIES OF HOPE</span></h1>
+    <hr class="divider-icon">
+    <p class="pt-3">
+        Agriwezesha has been able to bring a ray of hope in the lives of many . We have been able to positively influence the agricultural produce of <b> 2500 </b>farmers till now and the journey is continuing with full vigour. Presently our focus is on enhancing the productivity and market reach of cereals and vegetables. Following are the success stories of our initiatives.
+    </p>
+    <h4 style="color:#23A455; text-decoration:underline; font-size:29px">10% Increase in Yield of Tomatoes for Magurudumu Farmers Group</h4>
+    <div class="row pb-2">
+        <div class="col-md-4">
+            <div class="card">                
+                    <img src="{% static 'images/story1.jpg' %}" alt="">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">                
+                    <img src="{% static 'images/story2.jpg' %}" alt="">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card p-2">                
+                   <p>
+                    A group of 10 farmers from Morogooro, Tanzania were facing challenges in implementing modern farming techniques . They were also unable to get optimum returns from the markets for their crops. Agriwezesha team identified the areas which would help the farmers in reaping the benefits for their hard work. We trained the farmers on modern farm practices and the group was also connected with the markets to sell their harvested crops. The group started harnessing higher returns  which is evident from a 10% increase in the yield of tomatoes.
+                   </p>
+            </div>
+        </div>
+    </div>
+    <h4 style="color:#23A455; text-decoration:underline; font-size:29px">Market Availability of Sweet Peppers increases by 8% for Pangawe Women Group</h4>
+    <div class="row pb-2">
+        <div class="col-md-4">
+            <div class="card">                
+                    <img src="{% static 'images/story3.jpg' %}" alt="">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">                
+                    <img src="{% static 'images/story4.jpg' %}" alt="">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card p-2">                
+                   <p>
+                    A group of 12 farmers working in Morogoro,Tanzania were encountering difficulties in marketing the harvested crops. We  addressed their concern and connected them with the markets. Now the Pangawe Women Group is able to reach the markets and the market availability of sweet pepper  has increased significantly by 8%. The satisfaction of receiving the results of hard work is visible in these farmers. Their satisfaction motivates us to get ahead with more energy.
+                   </p>
+            </div>
+        </div>
+    </div>
+    <h4 style="color:#23A455; text-decoration:underline; font-size:29px">Farm Income of Misongeni Women Group Rises by 9%</h4>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">                
+                    <img src="{% static 'images/story5.jpg' %}" alt="">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">                
+                    <img src="{% static 'images/story6.jpg' %}" alt="">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card p-2">                
+                   <p>
+                    This is the story of a group of  8 farmers from Morogoro, Tanzania . Tomato production was  an extremely tough task for them . We supported them by explaining the basics and the methodologies of tomato production. We are glad to share that they have successfully harvested tomatoes  which raised their income by almost 9%.
+                   </p>
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock content %}
 
 

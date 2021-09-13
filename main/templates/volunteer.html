@@ -4,7 +4,7 @@
 {% load widget_tweaks %}
 
 {% block title %}
-    We connect and support small holder farmers
+    {{title}}
 {% endblock title %}
 
 
@@ -13,8 +13,69 @@
 {% endblock stylesheet %}
 
 {% block content %}
-<section style="min-height: 200px;"></section>
-<h1>volunteer</h1>
+<section style="min-height: 140px;"></section>
+<div class="page-header">
+    <div class="container">
+        <div class="breadc-box no-line">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="page-title">{{title}}</h1>
+                </div>
+                <div class="col-md-6 mobile-left text-right">
+                    <ul id="breadcrumbs" class="breadcrumbs none-style">
+                        <li><a href="/">Home</a></li>
+                        <li class="active text-light">{{title}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h1 style="padding-top: 5% !important;" class="text-center"><span class="page-headings text-uppercase">The team</span></h1>
+    <hr class="divider-icon">
+    <p class="pt-3">Join our volunteering program to support  the transformation of  agricultural scenario of Tanzania.</p>
+    <h4 class="pb-3 text-center">Available Volunteering Positions</h4>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{% static 'images/vol1.jpg' %}" class="card-img-top">
+                <div class="card-body">
+                  <h4 class="card-title team-title" style="color:#4054B2; font-weight:600; font-family: 'Roboto', Sans-serif;">Application Development Volunteer</h4>
+                  <p class="card-text">
+                    Are you enthusiastic  to design software which eases the lifestyle of people? This is the right platform to contribute your skills. Help us design an application to facilitate our service delivery.
+                  </p>
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLScLcDxZeLJS9U5Mj90qRuwhtxBxq4dP5mX5TyNoSZpTMtem9w/viewform"><button class="btn btn-primary btn-lg">Click To Start <br> Transforming Lives Now</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{% static 'images/vol2.jpg' %}" class="card-img-top">
+                <div class="card-body">
+                  <h4 class="card-title team-title" style="color:#4054B2; font-weight:600; font-family: 'Roboto', Sans-serif;">Video Design Volunteer</h4>
+                  <p class="card-text">
+                    Are you someone who loves to add that beautiful touch to pictures and videos that makes them more informative ?  Contribute with your  video editing skills to help us make  good professional videos using the pictures and  video clips
+                  </p>
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLScLcDxZeLJS9U5Mj90qRuwhtxBxq4dP5mX5TyNoSZpTMtem9w/viewform"><button class="btn btn-primary btn-lg">Click To Start <br> Transforming Lives Now</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{% static 'images/vol3.jpg' %}" class="card-img-top">
+                <div class="card-body">
+                  <h4 class="card-title team-title" style="color:#4054B2; font-weight:600; font-family: 'Roboto', Sans-serif;">Poster Design Volunteer</h4>
+                  <p class="card-text">
+                    Add that special touch of creativity using graphic design softwares. Help us in editing and creating posters based on our activities and events to promote them on social media.
+                  </p>
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLScLcDxZeLJS9U5Mj90qRuwhtxBxq4dP5mX5TyNoSZpTMtem9w/viewform"><button class="btn btn-primary btn-lg">Click To Start  <br> Transforming Lives Now</button></a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
 {% endblock content %}
 
 

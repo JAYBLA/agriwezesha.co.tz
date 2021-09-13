@@ -4,7 +4,7 @@
 {% load widget_tweaks %}
 
 {% block title %}
-    We Connect and Support Small Holder Farmers
+    {{title}}
 {% endblock title %}
 
 
@@ -13,8 +13,38 @@
 {% endblock stylesheet %}
 
 {% block content %}
-<section style="min-height: 200px;"></section>
-<h1>approach</h1>
+<section style="min-height: 140px;"></section>
+<div class="page-header">
+    <div class="container">
+        <div class="breadc-box no-line">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="page-title">{{title}}</h1>
+                </div>
+                <div class="col-md-6 mobile-left text-right">
+                    <ul id="breadcrumbs" class="breadcrumbs none-style">
+                        <li><a href="/">Home</a></li>
+                        <li class="active text-light">{{title}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h1 style="padding-top: 5% !important;" class="text-center"><span class="page-headings text-uppercase">OUR APPROACH</span></h1>
+    <hr class="divider-icon">
+    <p class="pt-3">
+        The major challenges in the agriculture sector of  Tanzania  are unreliable markets for farm products, unpredictable weather and limited agricultural technologies. Thus efficient farming is a distant dream for most of the smallholder farmers . Lack of knowledge on farming technologies further adds to their woes. “Agriwezesha” aims at filling up this space and has stepped in to support the farming community to achieve their goals.
+    </p>
+    <p>
+        Small scale farmers mostly reside in rural areas. They are the sole decision makers of all activities spanning across farming season, preparation for seeding, weeding period, post weeding period , harvesting period and post-harvesting period. Though there are multiple farming technologies with huge advantages, but farmers have very limited knowledge about them. One such technology is the <b> hydroponic systems</b> which offers various benefits. But its implementation is extremely rare among small scale farmers in Tanzania due to lack of awareness.
+    </p>
+    <p class="pb-3">
+        Agriwezesha identifies farmers by visiting potential farming areas . We have been striving to disseminate hydroponic farming technology in order to expand employment opportunities in the agriculture sector.  Since this technology does not use land it is <b> highly effective in even in urban areas.</b> Most importantly  it will enable farmers to do away with irrigation challenges. This technology has started showing results in <b> Morogoro region </b> and is expected to expand to other parts of the country with time.
+    </p>
+</div>
 {% endblock content %}
 
 

@@ -4,7 +4,7 @@
 {% load widget_tweaks %}
 
 {% block title %}
-    We connect and support small holder farmers
+    {{title}}
 {% endblock title %}
 
 
@@ -13,8 +13,88 @@
 {% endblock stylesheet %}
 
 {% block content %}
-<section style="min-height: 200px;"></section>
-<h1>resources</h1>
+<section style="min-height: 140px;"></section>
+<div class="page-header">
+    <div class="container">
+        <div class="breadc-box no-line">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="page-title">{{title}}</h1>
+                </div>
+                <div class="col-md-6 mobile-left text-right">
+                    <ul id="breadcrumbs" class="breadcrumbs none-style">
+                        <li><a href="/">Home</a></li>
+                        <li class="active text-light">{{title}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h1 style="padding-top: 5% !important;" class="text-center"><span class="page-headings text-uppercase">RESOURCES</span></h1>
+    <hr class="divider-icon">
+    <div class="row text-center" style="padding: 3% 0 !important;">        
+        <div class="col-md-4"></div>       
+        <div class="col-md-4">
+            <p><strong style="text-decoration:underline;">HYDROPONICS</strong></p></div>
+        <div class="col-md-4"></div>      
+    </div>
+    <p>
+      Hydroponic farming technology focusses on growing plants in nutrient solution with or without the use of inert medium such as gravel, perlite, rock wool, clay pellets, peat moss or rice husk .This farming technology is highly beneficial as it saves planting space, uses little amount of water and nutrients and doesn’t pollute the environment with chemicals compared to conventional agriculture. The technology can use items such as PVC pipes and recycled plastic bottles to establish a crops growing garden. The nutrient solutions for crops can be organic or non organic. However Agriwezesha is using organic solution for growing the crops.
+      Some of the vegetables which can be grown are swish chard (Beta Vulgaris), lettuce (Lactuca sativa), Chinese cabbage (Brassica Rapa) and tomatoes.
+    </p>
+    <div class="row text-center" style="padding: 3% 0 !important;">        
+      <div class="col-md-4"></div>       
+      <div class="col-md-4">
+          <p><strong style="text-decoration:underline;">GLIMPSES OF OUR WORK</strong></p></div>
+      <div class="col-md-4"></div>      
+    </div>
+    <div class="row pb-3">
+        <div class="col-md-3">
+            <div class="card">
+              <img src="{% static 'images/r1.jpg' %}" alt="" srcset="">
+              </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img src="{% static 'images/r2.jpg' %}" alt="" srcset="">
+            </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img src="{% static 'images/r3.jpg' %}" alt="" srcset="">
+          </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <img src="{% static 'images/r4.jpg' %}" alt="" srcset="">
+        </div>
+  </div>
+  <div class="col-md-3">
+    <div class="card">
+      <img src="{% static 'images/r5.jpg' %}" alt="" srcset="">
+      </div>
+</div>
+<div class="col-md-3">
+  <div class="card">
+    <img src="{% static 'images/r6.jpg' %}" alt="" srcset="">
+    </div>
+</div>
+<div class="col-md-3">
+  <div class="card">
+    <img src="{% static 'images/r7.jpg' %}" alt="" srcset="">
+    </div>
+</div>
+<div class="col-md-3">
+  <div class="card">
+    <img src="{% static 'images/r8.jpg' %}" alt="" srcset="">
+    </div>
+</div>
+
+    </div>
+</div>
 {% endblock content %}
 
 

@@ -4,7 +4,7 @@
 {% load widget_tweaks %}
 
 {% block title %}
-    We connect and support small holder farmers
+    {{title}}
 {% endblock title %}
 
 
@@ -13,8 +13,131 @@
 {% endblock stylesheet %}
 
 {% block content %}
-<section style="min-height: 200px;"></section>
-<h1>training</h1>
+<section style="min-height: 140px;"></section>
+<div class="page-header">
+    <div class="container">
+        <div class="breadc-box no-line">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="page-title">{{title}}</h1>
+                </div>
+                <div class="col-md-6 mobile-left text-right">
+                    <ul id="breadcrumbs" class="breadcrumbs none-style">
+                        <li><a href="/">Home</a></li>
+                        <li class="active text-light">{{title}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="entry-content">
+    <div class="container">
+        <div class="row">
+            <aside id="sidebar" class="widget-area service-sidebar col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <section id="text-1" class="widget widget_text bg-light text-light" style="padding: 5px !important;">
+                    <img src="{% static 'images/training.jpg' %}" alt="" srcset="">
+                </section>
+            </aside>
+
+            <div id="primary" class="content-area col-lg-6 col-md-6 col-sm-12 col-xs-12 pull-right">
+                <main id="main" class="site-main">
+
+                    <article class="ot_service type-ot_service status-publish has-post-thumbnail hentry">
+                        <div class="inner-post">
+                            <section class="wpb_row row-fluid">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="wpb_column column_container col-sm-12">
+                                            <div class="column-inner">
+                                                <div class="wpb_wrapper">
+                                                    <div class="wpb_text_column wpb_content_element">
+                                                        <div class="wpb_wrapper">
+                                                            <p>
+                                                                We are in the process of imparting trainings to farmers for enhancing their capabilities and harness the best from their hard work.  
+                                                            </p>
+                                                            <p>
+                                                                We help the farmers understand the practical aspects of the technologies and also demonstrate the technical features at all necessary places.
+                                                            </p>
+                                                            <p>
+                                                                Here is a sneak peak into the major trainings we are delivering. 
+                                                            </p>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </article>
+
+                </main>
+                <!-- #main -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header"><h4>Hydroponic Farming</h4></div>
+                    <div class="card-body">
+                      <h4 class="card-title team-title" style="color:#4054B2; font-weight:600; font-family: 'Roboto', Sans-serif;">Key Highlights</h4>
+                      <p class="card-text">
+                        <ul>                          
+                            <li><p>Learn the basics of Hydroponics</p></li>
+                            <li><p>Learn how to Setup your system step-by-step</p></li>
+                            <li><p>Learn to make your own nutrient solution</p></li>
+                            <li><p>Grow Your Own Food</p></li>
+                        </ul>
+                      </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header"><h4>Farming Business Skills</h4></div>
+                    <div class="card-body">
+                      <h4 class="card-title team-title" style="color:#4054B2; font-weight:600; font-family: 'Roboto', Sans-serif;">Key Highlights</h4>
+                      <p class="card-text">
+                        <ul>                          
+                            <li><p>Major types of farming practices</p> </li>
+                            <li><p>Major types of agribusiness</p></li>
+                            <li><p>Benefits of farming as a business</p> </li>
+                            <li><p>Challenges to farming as a business</p></li>
+                            <li><p>Key Facts about Farming as a Business</p> </li>
+                            <li><p>Key Actors and their Roles</p></li>
+                        </ul>
+                      </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header"><h4>Farmer’s Marketing</h4></div>
+                    <div class="card-body">
+                      <h4 class="card-title team-title" style="color:#4054B2; font-weight:600; font-family: 'Roboto', Sans-serif;">Key Highlights</h4>
+                      <p class="card-text">
+                        <ul>                          
+                            <li><p>Basics of agricultural marketing</p></li>
+                            <li><p>Supply and demand</p></li>
+                            <li><p>Costs, income, prices and profit</p></li>
+                            <li><p>Types of markets</p></li>
+                            <li><p>Changes in markets</p></li>
+                            <li><p>The value chain</p></li>
+                            <li><p>Developing marketing strategies</p></li>
+                            <li><p>The four Ps of marketing</p></li>
+                            <li><p>Entrepreneurial spirit</p></li>
+                        </ul>
+                      </p>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock content %}
 
 

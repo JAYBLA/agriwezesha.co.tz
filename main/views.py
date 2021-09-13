@@ -26,22 +26,34 @@ def history(request):
 
 def approach(request):
     template_name = 'approach.html'
-    context = {}
+    title="Our Approach"
+    context = {
+        "title":title,
+    }
     return render(request,template_name,context)
 
 def donate(request):
     template_name = 'donate.html'
-    context = {}
+    title="Donate"
+    context = {
+        "title":title,
+    }
     return render(request,template_name,context)
 
 def careers(request):
     template_name = 'careers.html'
-    context = {}
+    title="Careers"
+    context = {
+        "title":title,
+    }
     return render(request,template_name,context)
 
 def expert_panelist(request):
     template_name = 'expert_panelist.html'
-    context = {}
+    title="Expert Panelist"
+    context = {
+        "title":title,
+    }
     return render(request,template_name,context)
 
 def get_connected_to_market(request):
@@ -51,22 +63,34 @@ def get_connected_to_market(request):
 
 def get_expert(request):
     template_name = 'get_expert.html'
-    context = {}
+    title="Get In Touch With An Expert"
+    context = {
+        "title":title,
+    }
     return render(request,template_name,context)
 
 def resources(request):
     template_name = 'resources.html'
-    context = {}
+    title="Resources"
+    context = {
+        "title":title,
+    }
     return render(request,template_name,context)
 
 def statistics(request):
     template_name = 'statistics.html'
-    context = {}
+    title="Statistics"
+    context = {
+        "title":title,
+    }
     return render(request,template_name,context)
 
 def stories(request):
     template_name = 'stories.html'
-    context = {}
+    title="Stories Of Hope"
+    context = {
+        "title":title,
+    }
     return render(request,template_name,context)
 
 def team(request):
@@ -79,12 +103,18 @@ def team(request):
 
 def testimonials(request):
     template_name = 'testimonials.html'
-    context = {}
+    title="Testimonials"
+    context = {
+        "title":title,
+    }
     return render(request,template_name,context)
 
 def trainings(request):
     template_name = 'trainings.html'
-    context = {}
+    title="Trainings"
+    context = {
+        "title":title,
+    }
     return render(request,template_name,context)
 
 def vision_mission(request):
@@ -97,7 +127,10 @@ def vision_mission(request):
 
 def volunteer(request):
     template_name = 'volunteer.html'
-    context = {}
+    title="Volunteer with Us"
+    context = {
+        "title":title,
+    }
     return render(request,template_name,context)
 
 def consultation(request):

@@ -88,3 +88,24 @@ p{
     font-size: 3rem;
     background-color:#e5eef6;
 }
+.pb-2{
+    padding-bottom: 2rem !important;
+}
+
+.pb-3{
+    padding-bottom: 3rem !important;
+}
+
+.py-3{
+    padding-bottom: 3rem !important;
+}
+
+.pt-3{
+    padding-top: 3rem !important;
+}
+
+.p-2{
+    padding: 2rem !important;
+}
+
+

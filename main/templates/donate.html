@@ -4,7 +4,7 @@
 {% load widget_tweaks %}
 
 {% block title %}
-    We connect and support small holder farmers
+    {{title}}
 {% endblock title %}
 
 
@@ -13,8 +13,97 @@
 {% endblock stylesheet %}
 
 {% block content %}
-<section style="min-height: 200px;"></section>
-<h1>donate</h1>
+<section style="min-height: 140px;"></section>
+<div class="page-header">
+    <div class="container">
+        <div class="breadc-box no-line">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="page-title">{{title}}</h1>
+                </div>
+                <div class="col-md-6 mobile-left text-right">
+                    <ul id="breadcrumbs" class="breadcrumbs none-style">
+                        <li><a href="/">Home</a></li>
+                        <li class="active text-light">{{title}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="entry-content">
+    <div class="container">
+        <p class="p-2">
+            Your contribution will further our vision of  raising the economy of smallholder farmers of Tanzania.  Be assured your contributions are transforming lives. Donate to make a change.
+
+         You can donate any amount to the following account. 
+        </p>
+        <div class="row pb-3">
+            <aside id="sidebar" class="widget-area service-sidebar col-lg-6 col-md-6 col-sm-12 col-xs-12 p-2">
+                <section id="text-1" class="widget widget_text  bg-light " style="padding: 5px !important;">
+                    <img src="{% static 'images/donate.png' %}" alt="" srcset="">
+                </section>
+            </aside>
+
+            <div id="primary" class="content-area col-lg-6 col-md-6 col-sm-12 col-xs-12 pull-right">
+                <main id="main" class="site-main">
+
+                    <article class="ot_service type-ot_service status-publish has-post-thumbnail hentry">
+                        <div class="inner-post">
+                            <section class="wpb_row row-fluid">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="wpb_column column_container col-sm-12">
+                                            <div class="column-inner">
+                                                <div class="wpb_wrapper">
+                                                    <div class="wpb_text_column wpb_content_element">
+                                                        <div class="wpb_wrapper">
+                                                            <p>
+                                                                <b> Account number: 00711512184501</b> <br><br>
+                                                               <b> Account name: Agriwezesha</b><br><br>
+                                                               <b> Swift : MKCBTZTZ</b>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </article>
+
+                </main>
+                <!-- #main -->
+            </div>
+        </div>
+        <div class="row">
+            <h4 style="font-size: 29px">Kindly share the details after making the donation!!</h4>
+            <div class="card">
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label style="font-size:24px">Name</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="form-group">
+                          <label style="font-size:24px">Email</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label  style="font-size:24px">Donated Amount(Please mention the currency and the amount. For example "1000 Tanzanian Shilling")</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock content %}
 
 

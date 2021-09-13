@@ -4,7 +4,7 @@
 {% load widget_tweaks %}
 
 {% block title %}
-    We connect and support small holder farmers
+    {{title}}
 {% endblock title %}
 
 
@@ -13,8 +13,69 @@
 {% endblock stylesheet %}
 
 {% block content %}
-<section style="min-height: 200px;"></section>
-<h1>statistics</h1>
+<section style="min-height: 140px;"></section>
+<div class="page-header">
+    <div class="container">
+        <div class="breadc-box no-line">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="page-title">{{title}}</h1>
+                </div>
+                <div class="col-md-6 mobile-left text-right">
+                    <ul id="breadcrumbs" class="breadcrumbs none-style">
+                        <li><a href="/">Home</a></li>
+                        <li class="active text-light">{{title}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h1 style="padding-top: 5% !important;" class="text-center"><span class="page-headings text-uppercase">STATISTICS ON AGRICULTURE IN TANZANIA</span></h1>
+    <hr class="divider-icon">
+</div>
+
+<section class="wpb_row row-fluid row-o-equal-height row-flex section-padd no-bot pb-3">
+  <div class="container">
+      <div class="row">
+          <div class="wpb_column column_container col-sm-6 col-md-6 pb-3">
+            <div class="card">            
+                <div class="card-body">
+                  <h5 class="card-title">ARABLE   LAND</h5>
+                  <p class="card-text">                As of 2016, Tanzania had over 44 million hectares of arable land with only 33 percent utilization in cultivation. Land is a vital asset in ensuring food security. The nine main food crops in Tanzania are maize , sorghum, millet, rice, wheat, beans, cassava, potatoes, and bananas.</p>
+                </div>
+              </div>
+          </div>
+          <div class="wpb_column column_container col-sm-6 col-md-6 pb-3">
+            <div class="card">            
+                <div class="card-body">
+                  <h5 class="card-title">POPULATION DEPENDENT ON AGRICULTURE</h5>
+                  <p class="card-text">The primary source of income for almost 70 percent of the population living in rural areas is agriculture.</p>
+                </div>
+              </div>
+          </div>
+          <div class="wpb_column column_container col-sm-6 col-md-6">
+            <div class="card">            
+                <div class="card-body">
+                  <h5 class="card-title">CONTRIBUTION OF AGRICULTURE TO GDP</h5>
+                  <p class="card-text">Agriculture accounts for over 27 percent of Tanzania’s GDP and provides employment to majority of the population.</p>
+                </div>
+              </div>
+          </div>
+          <div class="wpb_column column_container col-sm-6 col-md-6">
+            <div class="card">            
+                <div class="card-body">
+                  <h5 class="card-title">SMALLHOLDER FARMERS</h5>
+                  <p class="card-text">As of 2017,over 75% of Tanzanians were employed in the agriculture sector of which the smallholder farmers are the biggest group as a whole.</p>
+                </div>
+              </div>
+          </div>
+          
+      </div>
+  </div>
+</section>
 {% endblock content %}
 
 
