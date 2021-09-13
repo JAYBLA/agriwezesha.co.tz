@@ -4,7 +4,7 @@
 {% load widget_tweaks %}
 
 {% block title %}
-    We connect and support small holder farmers
+    {{title}}
 {% endblock title %}
 
 
@@ -13,8 +13,39 @@
 {% endblock stylesheet %}
 
 {% block content %}
-<section style="min-height: 200px;"></section>
-<h1>history</h1>
+<section style="min-height: 140px;"></section>
+<div class="page-header">
+    <div class="container">
+        <div class="breadc-box no-line">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="page-title">{{title}}</h1>
+                </div>
+                <div class="col-md-6 mobile-left text-right">
+                    <ul id="breadcrumbs" class="breadcrumbs none-style">
+                        <li><a href="/">Home</a></li>
+                        <li class="active text-light">{{title}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h1 style="padding-top: 5% !important;" class="text-center"><span class="page-headings text-uppercase">History</span></h1>
+    <hr class="divider-icon">
+    <div class="row" style="padding: 3% 0 !important;">        
+        <p>
+            Have you ever wondered about the life of the farmers who toil hard on the field so that everyone cherishes the varieties of food? The producers of delicacies have to struggle immensely to get a satisfying meal. <b> “Agriwezesha”</b> was born to help the smallholder farmers achieve their dreams. It is a <b>Non-Governmental Organization (NGO)</b> registered in <b> 2019</b> under the Non-Government Organization Act of 2002.
+        </p>
+
+        <p>
+           <b>“Agriwezesha”</b> is a combination of English and Swahili word which means “Support Agriculture”. It was founded by a group of five people who aspire to raise farmers’ source of income which is primarily from the agricultural output. Every day we as a team are making progress in introducing them to modern farming practices. <b>These practices not only scale up the agricultural productivity of smallholder farmers but also nurture nutritious crops and ensure the food security of their families. </b>  Tanzania has a majority of smallholder farmers (0.2 to 20 ha farm size) and they produce the majority of the agricultural crops. We are working closely with smallholder farmers to enhance their agricultural productivity. In addition to it, we are also <b>improving farmers’ market connections through training and consultations. </b>  We have a panel of  experts who share implementable solutions and technical aspects of best farming practices with the farmers to help them boost their income through sustainable farming methodologies. The consultation services provided by the experts is free of any charges. <br><br>
+           We are creating a link between the farmers and the vast technology available in the agricultural sector.
+        </p>
+    </div>
+</div>
 {% endblock content %}
 
 

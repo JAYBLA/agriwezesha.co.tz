@@ -18,7 +18,10 @@ def home(request):
 
 def history(request):
     template_name = 'history.html'
-    context = {}
+    title="History"
+    context = {
+        "title":title,
+    }
     return render(request,template_name,context)
 
 def approach(request):
@@ -68,7 +71,10 @@ def stories(request):
 
 def team(request):
     template_name = 'team.html'
-    context = {}
+    title="The Team"
+    context = {
+        "title":title,
+    }
     return render(request,template_name,context)
 
 def testimonials(request):
@@ -83,7 +89,10 @@ def trainings(request):
 
 def vision_mission(request):
     template_name = 'vision_mission.html'
-    context = {}
+    title="Vision & Mission"
+    context = {
+        "title":title,
+    }
     return render(request,template_name,context)
 
 def volunteer(request):
@@ -93,7 +102,10 @@ def volunteer(request):
 
 def consultation(request):
     template_name = 'consultation.html'
-    context = {}
+    title="Consultation"
+    context = {
+        "title":title,
+    }
     return render(request,template_name,context)
 
 def contact(request):

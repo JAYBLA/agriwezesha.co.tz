@@ -64,3 +64,27 @@ p{
     color: #fff;
     font-size: 1em;
 }
+
+.page-headings{
+    color: #54595f;
+    font-family: "Roboto", Sans-serif;
+    font-weight: 600
+}
+
+.divider-icon {
+    margin: 25px auto 30px;
+    padding: 0;
+    border: 0;
+    border-top: solid 1px;
+    text-align: center;
+}
+.divider-icon:after {
+    content: "\f06c";
+    display: inline-block;
+    position: relative;
+    top: -1.7rem;
+    padding: 0 0.5rem;
+    font-family: FontAwesome;
+    font-size: 3rem;
+    background-color:#e5eef6;
+}

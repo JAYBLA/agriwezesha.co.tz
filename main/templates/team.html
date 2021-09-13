@@ -4,7 +4,7 @@
 {% load widget_tweaks %}
 
 {% block title %}
-    We connect and support small holder farmers
+    {{title}}
 {% endblock title %}
 
 
@@ -13,8 +13,102 @@
 {% endblock stylesheet %}
 
 {% block content %}
-<section style="min-height: 200px;"></section>
-<h1>team</h1>
+<section style="min-height: 140px;"></section>
+<div class="page-header">
+    <div class="container">
+        <div class="breadc-box no-line">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="page-title">{{title}}</h1>
+                </div>
+                <div class="col-md-6 mobile-left text-right">
+                    <ul id="breadcrumbs" class="breadcrumbs none-style">
+                        <li><a href="/">Home</a></li>
+                        <li class="active text-light">{{title}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h1 style="padding-top: 5% !important;" class="text-center"><span class="page-headings text-uppercase">The team</span></h1>
+    <hr class="divider-icon">
+    <div class="row text-center" style="padding: 3% 0 !important;">        
+        <div class="col-md-4"></div>       
+        <div class="col-md-4">
+            <p><strong style="text-decoration:underline;">FOUNDING MEMBERS</strong></p></div>
+        <div class="col-md-4"></div>      
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <img src="{% static 'images/team/deo.jpg' %}" class="card-img-top">
+                <div class="card-body">
+                  <h4 class="card-title team-title" style="color:#4054B2; font-weight:600; font-family: 'Roboto', Sans-serif;">Deograsia Ignas</h4>
+                  <p class="card-text">
+                    Deograsia Ignas is an MBA and  is keenly pursuing her interests in administration and management. Her zeal to serve the community and transform the lives of smallholder farmers motivated her to lay the founding stones of Agriwezesha.
+                  </p>
+                </div>
+              </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <img src="{% static 'images/team/flugenia.jpg' %}" class="card-img-top">
+                <div class="card-body">
+                  <h4 class="card-title team-title" style="color:#4054B2; font-weight:600; font-family: 'Roboto', Sans-serif;">Flugenia Bamhiga</h4>
+                  <p class="card-text">
+                    Flugenia Bamhiga is a B.Sc in Agribusiness and is majorly interested in exploring modern farming techniques. Her passion for helping farmers to improve their economic status played a key role in launching Agriwezesha.
+                  </p>
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <div class="row" style="padding: 5% 0 !important;">
+        <div class="col-md-4"></div>       
+        <div class="col-md-4">
+            <p><strong style="text-decoration:underline;">CORE MEMBERS</strong></p></div>
+        <div class="col-md-4"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{% static 'images/team/thabitha.jpg' %}" class="card-img-top">
+                <div class="card-body">
+                  <h4 class="card-title team-title" style="color:#4054B2; font-weight:600; font-family: 'Roboto', Sans-serif;">Thabitha Lucas</h4>
+                  <p class="card-text">
+                    Thabita is an MBA and is enthusiastic about marketing. Her inclination towards marketing and entrepreneurship has played a key role in joining the NGO.
+                  </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{% static 'images/team/lupiana.jpg' %}" class="card-img-top">
+                <div class="card-body">
+                  <h4 class="card-title team-title" style="color:#4054B2; font-weight:600; font-family: 'Roboto', Sans-serif;">Lupiana David Mwambungu</h4>
+                  <p class="card-text">
+                    Lupiana is an advanced Diploma in Accountancy and has been exploring the accountancy and audit aspects of the NGO.
+                  </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{% static 'images/team/christian.jpg' %}" class="card-img-top">
+                <div class="card-body">
+                  <h4 class="card-title team-title" style="color:#4054B2; font-weight:600; font-family: 'Roboto', Sans-serif;">Christian Myowela</h4>
+                  <p class="card-text">
+                    Christian is an M.Sc and is contributing in the field of Project Management for the NGO. He has been handling the planning and execution of the initiatives of the NGO.
+                  </p>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
 {% endblock content %}
 
 

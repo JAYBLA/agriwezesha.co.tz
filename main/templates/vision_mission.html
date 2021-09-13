@@ -4,7 +4,7 @@
 {% load widget_tweaks %}
 
 {% block title %}
-    We connect and support small holder farmers
+    {{title}}
 {% endblock title %}
 
 
@@ -13,8 +13,39 @@
 {% endblock stylesheet %}
 
 {% block content %}
-<section style="min-height: 200px;"></section>
-<h1>vision and mission</h1>
+<section style="min-height: 140px;"></section>
+<div class="page-header">
+    <div class="container">
+        <div class="breadc-box no-line">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="page-title">{{title}}</h1>
+                </div>
+                <div class="col-md-6 mobile-left text-right">
+                    <ul id="breadcrumbs" class="breadcrumbs none-style">
+                        <li><a href="/">Home</a></li>
+                        <li class="active text-light">{{title}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h1 style="padding-top: 5% !important;" class="text-center"><span class="page-headings text-uppercase">VISION & MISSION</span></h1>
+    <hr class="divider-icon">
+    <div class="row" style="padding: 3% 0 !important;">        
+        <h4 style="color: #0F572B !important;">VISION</h4>
+        <p>
+            <b><br>To attain increased agricultural productivity and improved market connections for smallholder farmers in Tanzania.</b>
+        </p>
+        <h4 style="color: #0F572B !important;">MISSION</h4>
+        <p>
+            <b>To boost productivity and improve market connections in Tanzania through considering the use of modern farming practices and technologies which are affordable by smallholder farmers.</b>
+        </p>
+    </div>
+</div>
 {% endblock content %}
 
 
