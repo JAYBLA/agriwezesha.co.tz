@@ -27,8 +27,7 @@ SECRET_KEY = config('DJANGO_SECRET_KEY')
 DEBUG = config('DEBUG', cast=bool, default=False)
 
 if not DEBUG:
-    ALLOWED_HOSTS = ['agriwezesha.co.tz','www.agriwezesha.co.tz','.agriwezesha.co.tz']
-    GOOGLE_RECAPTCHA_SECRET_KEY = config('GOOGLE_RECAPTCHA_SECRET_KEY')
+    ALLOWED_HOSTS = ['agriwezesha.co.tz','www.agriwezesha.co.tz','.agriwezesha.co.tz']   
     SECURE_SSL_REDIRECT=True
     SECURE_PROXY_SSL_HEADER=('HTTP_X_FORWARDED_PROTO', 'https')
     SESSION_COOKIE_SECURE=True
@@ -153,8 +152,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'
-MEDIA_URL = '/media/'
+STATIC_URL = 'public_html/static/'
+MEDIA_URL = 'public_html/media/'
 
 if not DEBUG:
     STATICFILES_DIRS = [
