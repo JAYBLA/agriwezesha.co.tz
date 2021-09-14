@@ -156,17 +156,10 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
 if not DEBUG:
-    STATICFILES_DIRS = [
-        BASE_DIR / "static",
-    ]
-
     MEDIA_ROOT = '/home/agriwez1/public_html/media'
     STATIC_ROOT = '/home/agriwez1/public_html/static'
 else:
-    STATICFILES_DIRS = [
-        BASE_DIR / "static",
-    ]
-    MEDIA_ROOT = 'media'
+    MEDIA_ROOT = '/media'
     STATIC_ROOT = '/static'
     
     
