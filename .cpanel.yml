@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/agriwez1/agriwezesha/
+    - /bin/cp -R agriwezesha $DEPLOYPATH
