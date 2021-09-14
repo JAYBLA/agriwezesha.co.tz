@@ -9,6 +9,7 @@ urlpatterns = [
     path('ajax-contact/', views.process_contact, name='contact_post'),
     path('ajax-expert/', views.process_expert, name='expert_post'),
     path('ajax-market/', views.process_market, name='market_post'),
+    path('ajax-donation/', views.process_donation, name='donation_post'),
     path('history/', views.history,name='history'),
     path('careers/', views.careers,name='careers'), 
     path('volunteer/', views.volunteer,name='volunteer'), 

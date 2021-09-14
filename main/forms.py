@@ -17,3 +17,9 @@ class MarketForm(forms.ModelForm):
     class Meta:
         model = Market
         fields= '__all__'
+        
+class DonateForm(forms.ModelForm):
+    class Meta:
+        model = Donate
+        fields= '__all__'
+

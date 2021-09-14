@@ -39,3 +39,13 @@ class Market(models.Model):
     
     def __str__(self):
         return self.name
+    
+class Donate(models.Model):
+    name = models.CharField(max_length=200)
+    email = models.EmailField()
+    amount = models.CharField(max_length=200)
+    created_at = models.DateTimeField(auto_now_add=True)
+    modified_at = models.DateTimeField(auto_now=True)
+    
+    def __str__(self):
+        return self.name

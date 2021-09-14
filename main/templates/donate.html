@@ -83,19 +83,22 @@
             <h4 style="font-size: 29px">Kindly share the details after making the donation!!</h4>
             <div class="card">
                 <div class="card-body">
-                    <form>
+                    <form method="post" action="" id="donation-info-form">
+                        {% csrf_token %}
+                        {% for hidden in form.hidden_fields %}
+                        {{ hidden }}
+                        {% endfor %}
                         <div class="form-group">
                             <label style="font-size:24px">Name</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
+                            {% render_field form.name class="form-control" placeholder="Enter Your Name" %}
                         </div>
                         <div class="form-group">
                           <label style="font-size:24px">Email</label>
-                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                          {% render_field form.email class="form-control" placeholder="Enter Your Email" %}
                         </div>
                         <div class="form-group">
                             <label  style="font-size:24px">Donated Amount(Please mention the currency and the amount. For example "1000 Tanzanian Shilling")</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
+                            {% render_field form.amount class="form-control" placeholder="Amount" %}
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                       </form>
@@ -108,6 +111,36 @@
 
 
 {% block javascript %}
+<script>
+    const form = document.getElementById('donation-info-form');
+    form.addEventListener('submit', submitHandler)
+
+    function submitHandler(e){
+      e.preventDefault();
+      $.ajax({
+        type:'POST',
+        url:"{% url 'main:donation_post' %}",
+        data:$("#donation-info-form").serialize(),
+        success: function(data){
+          if (data.msg == 'success'){
+            form.reset();
+            Swal.fire({
+              icon: 'success',
+                title: 'Submitted Successfully!',
+                text: 'We will contact you as soon as possible!',
+            })
+          }else{
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Something went wrong!',
+            })
+          }
+        }
+      })
+    }
+
+  </script>
 {% endblock javascript %}
     
     

@@ -35,8 +35,10 @@ def approach(request):
 def donate(request):
     template_name = 'donate.html'
     title="Donate"
+    form = DonateForm
     context = {
         "title":title,
+        "form":form,
     }
     return render(request,template_name,context)
 
@@ -264,6 +266,36 @@ def process_market(request):
                 'crop' : crop,
                 'crop_qty' :crop_qty,
                 'sell_time' : sell_time,
+                'subject':subject,
+            })
+            plain_message = strip_tags(html_message)
+            recipient_list = ['agriwezesha@gmail.com',]
+            from_email = "contact@agriwezesha.co.tz"
+            mail.send_mail(subject,plain_message, from_email, recipient_list, html_message=html_message,fail_silently=False,)
+
+            return JsonResponse({'msg': 'success'}, safe=False)
+        else:
+            return JsonResponse({'msg': 'error'})
+        
+        
+def process_donation(request):
+    if request.is_ajax():
+        if request.method == 'POST':
+            name = request.POST['name'],
+            email = request.POST['email'],            
+            amount = request.POST['amount'],
+            
+            donation = Donate(
+                name=name,               
+                email=email,
+                amount=amount,        
+            )
+            donation.save()
+            subject = 'Donation Information'
+            html_message = render_to_string('donation_mail_template.html', {
+                'name':name, 
+                'email':email,       
+                'amount': amount,
                 'subject':subject,
             })
             plain_message = strip_tags(html_message)
