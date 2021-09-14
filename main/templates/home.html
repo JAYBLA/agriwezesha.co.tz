@@ -49,7 +49,7 @@
 
             <li data-transition="fade" data-slotamount="10" data-masterspeed="default" data-thumb="">
                 <!--  BACKGROUND IMAGE -->
-                <img src="{% static 'images/slider/slide3.png' %}" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" />
+                <img src="{% static 'images/slider/slide4.png' %}" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" />
                 <div class="tp-caption tp-resizeme" data-x="right" data-hoffset="" data-y="bottom" data-voffset="" data-width="['auto','290','auto','320']" data-transform_idle="o:1;" data-transform_in="x:550px;opacity:0;s:800;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="1000" data-responsive_offset="on">
                 </div>
                 <div class="tp-caption tp-resizeme font-second text-second bolder" data-x="['left']" data-hoffset="['0','15','15','15']" data-y="top" data-voffset="350" data-width="['580','580','480','320']" data-transform_idle="o:1;" data-transform_in="x:100px;opacity:0;s:800;e:Power3.easeOut;" data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="1500" data-whitespace="['nowrap','nowrap','nowrap','normal']" data-fontsize="['14','14','14','14']" data-responsive_offset="on">
@@ -59,7 +59,7 @@
                     <h4 class="text-light my-3" style="font-size:3rem">We Support small-holder Farmers in Production Techniques</h4>
                     </div>                    <p>Help You To Grow Your Business</p>
                 </div>
-            </li>
+            </li>            
         </ul>
     </div>
 </section>
@@ -113,14 +113,14 @@
                 <img src="{% static 'images/service/training.png' %}" alt="">
                 <h4 class="color-dark my-3">TRAINING/EDUCATION</h4>
                 <p>We are providing different trainings to smallholder farmers on modern farming practices and farming technology. We have practical training sessions that allow a farmer to gain hands-on experience. We also have online training programs that can be accessed freely by the farmers.</p>
-                <a href=""><button class="btn service-button mb-3"><i class="fa fa-chevron-right"></i>Read More</button></a>
+                <a href="{% url 'main:trainings' %}"><button class="btn service-button mb-3"><i class="fa fa-chevron-right"></i>Read More</button></a>
                 <hr class="d-lg-none">
             </div>
             <div class="col-md-4 text-center service-column">
                 <img src="{% static 'images/service/market.png' %}" alt="">
                 <h4 class="color-dark my-3">MARKET LINKAGE</h4>
                 <p>We help small-holder farmers to get good and reliable markets for their products after harvest. We do this to increase their income and so later improve their standard of living.</p>
-                <a href=""><button class="btn service-button mb-3"><i class="fa fa-chevron-right"></i>Read More</button></a>
+                <a href="{% url 'main:get_connected_to_market' %}"><button class="btn service-button mb-3"><i class="fa fa-chevron-right"></i>Read More</button></a>
                 <hr class="d-lg-none">
             </div>
         </div>

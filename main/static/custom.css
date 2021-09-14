@@ -108,4 +108,28 @@ p{
     padding: 2rem !important;
 }
 
+.widget_media_image{
+    background-color: #fff !important;
+    padding: 5px 2px !important;
+    border-radius: 3px !important;
+    width: 150px !important;
+    height: 150px !important;
+}
+.widget_media_image img{
+    width: 130px !important;
+    height: auto;
+}
+
+.custom-html-widget ul li a{
+    font-size: 1.2rem !important;
+}
+
+.custom-html-widget ul li a:hover{
+    color: #6ba843 !important;
+}
+
+#back-to-top {
+    background: #6ba843 !important;
+}
+
 

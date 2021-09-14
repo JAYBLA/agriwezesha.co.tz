@@ -31,7 +31,45 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
-    <link rel="shortcut icon" href="favicon.png">
+    <link rel="shortcut icon" href="{% static 'images/logo.svg' %}">
+    <style>
+        .fixed-language-button{
+    position: fixed;
+    top: 88%;
+    right: 5%;
+    z-index: 30000;
+  }
+
+  @media only screen and (max-width: 768px) {
+      .fixed-language-button{
+      top: 78%;
+    }
+  }
+
+  .goog-logo-link {
+        display:none !important;
+    } 
+        
+    .goog-te-gadget {
+        color: transparent !important;
+    }
+
+    .goog-te-banner-frame.skiptranslate {
+    display: none !important;
+    }
+
+    .goog-te-gadget{
+      margin-left: 20px;
+    }
+    .goog-te-combo{
+      padding-left:30px;
+      padding-right:30px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      font-size:18px !important;      
+    }
+
+    </style>
 </head>
 <body class="royal_preloader">
 	<div id="page" class="site">
@@ -91,10 +129,11 @@
   <div id="google_translate_element" class="fixed-language-button shadow-lg rounded pb-2 bg-warning"><span class="ml-4" style="font-size: 14px !important;">Change Language</span></div>
   <script type="text/javascript">
     function googleTranslateElementInit() {
-      new google.translate.TranslateElement({includedLanguages: 'en,sw,',layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL }, 
+      new google.translate.TranslateElement({pageLanguage: 'en',layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL }, 
    'google_translate_element');
     }
   </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     <script src="{% static 'js/sweetalert2.js' %}"></script>
 

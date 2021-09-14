@@ -1,8 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 from django.http import JsonResponse
-from .forms import ContactForm
-from .models import Contact
+from .forms import *
+from .models import *
 
 from django.core import mail
 from django.template.loader import render_to_string
@@ -58,14 +58,21 @@ def expert_panelist(request):
 
 def get_connected_to_market(request):
     template_name = 'get_connected_to_market.html'
-    context = {}
+    title="Get Connected To The Market"
+    form = MarketForm
+    context = {
+        "title":title,
+        "form":form,
+    }
     return render(request,template_name,context)
 
 def get_expert(request):
     template_name = 'get_expert.html'
     title="Get In Touch With An Expert"
+    form = ExpertForm
     context = {
         "title":title,
+        "form":form,
     }
     return render(request,template_name,context)
 
@@ -144,7 +151,11 @@ def consultation(request):
 def contact(request):
     template_name = 'contact.html'
     form = ContactForm()
-    context = {'form':form}
+    title="Contact Us"
+    context = {
+        'form':form,
+         "title":title,
+    }
     return render(request,template_name,context)
 
 def process_contact(request):
@@ -172,6 +183,88 @@ def process_contact(request):
                 'email': email,
                 'message': message,
                 'subject':subject, 
+            })
+            plain_message = strip_tags(html_message)
+            recipient_list = ['agriwezesha@gmail.com',]
+            from_email = "contact@agriwezesha.co.tz"
+            mail.send_mail(subject,plain_message, from_email, recipient_list, html_message=html_message,fail_silently=False,)
+
+            return JsonResponse({'msg': 'success'}, safe=False)
+        else:
+            return JsonResponse({'msg': 'error'})
+        
+def process_expert(request):
+    if request.is_ajax():
+        if request.method == 'POST':
+            name = request.POST['name'],
+            phone = request.POST['phone'],            
+            village = request.POST['village'],
+            district = request.POST['district'],
+            region = request.POST['region'],
+            message = request.POST['message']
+            
+            expert = Expert(
+                name=name,               
+                phone=phone,
+                village=village,
+                district=district,   
+                region=region,                        
+                message=message                
+            )
+            expert.save()
+            subject = 'Need an Expert!'
+            html_message = render_to_string('expert_mail_template.html', {
+                'name':name, 
+                'phone':phone,       
+                'village': village,
+                'district': district,
+                'region':region,
+                'message':message,
+                'subject':subject,
+            })
+            plain_message = strip_tags(html_message)
+            recipient_list = ['agriwezesha@gmail.com',]
+            from_email = "contact@agriwezesha.co.tz"
+            mail.send_mail(subject,plain_message, from_email, recipient_list, html_message=html_message,fail_silently=False,)
+
+            return JsonResponse({'msg': 'success'}, safe=False)
+        else:
+            return JsonResponse({'msg': 'error'})
+        
+def process_market(request):
+    if request.is_ajax():
+        if request.method == 'POST':
+            name = request.POST['name'],
+            phone = request.POST['phone'],            
+            village = request.POST['village'],
+            district = request.POST['district'],
+            region = request.POST['region'],
+            crop = request.POST['crop']
+            crop_qty = request.POST['crop_qty']
+            sell_time = request.POST['sell_time']
+            
+            market = Market(
+                name=name,               
+                phone=phone,
+                village=village,
+                district=district,   
+                region=region,                        
+                crop = crop,
+                crop_qty = crop_qty,
+                sell_time = sell_time,         
+            )
+            market.save()
+            subject = 'Get Connected to Market'
+            html_message = render_to_string('market_mail_template.html', {
+                'name':name, 
+                'phone':phone,       
+                'village': village,
+                'district': district,
+                'region':region,
+                'crop' : crop,
+                'crop_qty' :crop_qty,
+                'sell_time' : sell_time,
+                'subject':subject,
             })
             plain_message = strip_tags(html_message)
             recipient_list = ['agriwezesha@gmail.com',]

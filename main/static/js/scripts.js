@@ -1,11 +1,12 @@
+
 (function($) {
   "use strict";
 
     //Preloader
     Royal_Preloader.config({
         mode           : 'logo',
-        logo           : 'images/logo-blue.png',
-        logo_size      : [187, 40],
+        logo           : '../static/images/logo.svg',
+        logo_size      : [187, 187],
         showProgress   : true,
         showPercentage : true,
         text_colour: '#0a0f2b',

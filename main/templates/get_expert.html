@@ -37,35 +37,41 @@
     <hr class="divider-icon">
 
     <div class="row pb-3">
-        <div class="card">
-            <div class="card-body">
-                <form>
-                    <div class="form-group">
-                        <label style="font-size:24px">Your Name</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div class="form-group">
-                        <label style="font-size:24px">Your Mobile Number</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div class="form-group">
-                        <label style="font-size:24px">Village/Street</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div class="form-group">
-                        <label style="font-size:24px">District</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div class="form-group">
-                        <label style="font-size:24px">Region</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div class="form-group">
-                        <label  style="font-size:24px">Explain your issue that need to be taken care by our expert</label>
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                  </form>
+        <div class="col-md-8 offset-md-2">
+            <div class="card">
+                <div class="card-body">
+                    <form method="post" action="" id="expert-info-form">
+                        {% csrf_token %}
+                        {% for hidden in form.hidden_fields %}
+                        {{ hidden }}
+                        {% endfor %}
+                        <div class="form-group">
+                            <label style="font-size:24px">Your Name</label>
+                            {% render_field form.name class="form-control" placeholder="Enter Your Name" %}
+                        </div>
+                        <div class="form-group">
+                            <label style="font-size:24px">Your Mobile Number</label>
+                            {% render_field form.phone class="form-control" placeholder="Phone Number" %}
+                        </div>
+                        <div class="form-group">
+                            <label style="font-size:24px">Village/Street</label>
+                            {% render_field form.village class="form-control" placeholder="Enter Your Village/Street" %}
+                        </div>
+                        <div class="form-group">
+                            <label style="font-size:24px">District</label>
+                            {% render_field form.district class="form-control" placeholder="Your District" %}
+                        </div>
+                        <div class="form-group">
+                            <label style="font-size:24px">Region</label>
+                            {% render_field form.region class="form-control" placeholder="Your Region" %}
+                        </div>
+                        <div class="form-group">
+                            <label  style="font-size:24px">Explain your issue that need to be taken care by our expert</label>
+                            {% render_field form.message class="form-control" placeholder="Write Here!" rows="3" %}
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </form>
+                </div>
             </div>
         </div>
     </div>
@@ -74,6 +80,36 @@
 
 
 {% block javascript %}
+<script>
+    const form = document.getElementById('expert-info-form');
+    form.addEventListener('submit', submitHandler)
+
+    function submitHandler(e){
+      e.preventDefault();
+      $.ajax({
+        type:'POST',
+        url:"{% url 'main:expert_post' %}",
+        data:$("#expert-info-form").serialize(),
+        success: function(data){
+          if (data.msg == 'success'){
+            form.reset();
+            Swal.fire({
+              icon: 'success',
+                title: 'Submitted Successfully!',
+                text: 'We will contact you as soon as possible!',
+            })
+          }else{
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Something went wrong!',
+            })
+          }
+        }
+      })
+    }
+
+  </script>
 {% endblock javascript %}
     
     

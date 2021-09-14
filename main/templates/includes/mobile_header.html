@@ -2,7 +2,7 @@
 <div class="header_mobile">
     <div class="mlogo_wrapper clearfix">
         <div class="mobile_logo">
-            <a href="#"><img src="images/logo-white.svg" alt="Consultax"></a>
+            <a href="#"><img src="{% static 'images/logo.svg' %}" alt="Logo"></a>
         </div>
         <div id="mmenu_toggle">
             <button></button>
@@ -11,47 +11,44 @@
     <div class="mmenu_wrapper">
         <div class="mobile_nav collapse">
             <ul id="menu-main-menu" class="mobile_mainmenu">
-                <li class="menu-item-has-children"><a href="index.html">Home</a>
+                <li class=""><a href="/">Home</a>
+                </li>
+                <li class="menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1731"><a href="#">ABOUT US</a>
                     <ul class="sub-menu">
-                        <li class="menu-item-home current-page_item page-item-1530 current_page_item menu-item-2017"><a href="index.html" aria-current="page">Home 1</a></li>
-                        <li class="menu-item-2016"><a href="home-2.html">Home 2</a></li>
+                        <li class="menu-item-1738"><a href="{% url 'main:history' %}">HISTORY</a></li>
+                        <li class="menu-item-1745"><a href="{% url 'main:vision_mission' %}">VISION & MISSION</a></li>
+                        <li class="menu-item-1742"><a href="{% url 'main:team' %}">THE TEAM</a></li>
+                        <li class="menu-item-1746"><a href="{% url 'main:testimonials' %}">TESTIMONIALS</a></li>
                     </ul>
                 </li>
-                <li class="menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1731"><a href="#">Pages</a>
+                <li class="menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1789"><a href="#">CREATING IMPACT</a>
                     <ul class="sub-menu">
-                        <li class="menu-item-1738"><a href="about.html">About Us</a></li>
-                        <li class="menu-item-1745"><a href="team.html">Our Team</a></li>
-                        <li class="menu-item-1742"><a href="how-it-work.html">How It Work</a></li>
-                        <li class="menu-item-1746"><a href="testimonials.html">Testimonials</a></li>
-                        <li class="menu-item-1757"><a href="services.html">Services Box</a></li>
-                        <li class="menu-item-1744"><a href="services-icon.html">Icon Box</a></li>
-                        <li class="menu-item-1740"><a href="career.html">Career</a></li>
+                        <li class="menu-item-1738"><a href="{% url 'main:statistics' %}">STATISTICS</a></li>
+                        <li class="menu-item-1745"><a href="{% url 'main:approach' %}">OUR APPROACH</a></li>
+                        <li class="menu-item-1742"><a href="{% url 'main:stories' %}">STORIES OF HOPE</a></li>
                     </ul>
                 </li>
-                <li class="menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1789"><a href="services.html">Services</a>
+                <li class="menu-item-has-children"><a href="#">HOW YOU CAN HELP</a>
                     <ul class="sub-menu">
-                        <li class="menu-item-1791"><a href="service-detail.html">Financial Consulting</a></li>
-                        <li class="menu-item-1758"><a href="service-detail.html">International Business</a></li>
-                        <li class="menu-item-1790"><a href="service-detail.html">Audit &amp; Assurance</a></li>
-                        <li class="menu-item-1760"><a href="service-detail.html">Taxes and Efficiency</a></li>
-                        <li class="menu-item-1761"><a href="service-detail.html">Bonds &amp; Commodities</a></li>
+                        <li class="menu-item-1738"><a href="{% url 'main:donate' %}">DONATE NOW</a></li>
+                        <li class="menu-item-1745"><a href="{% url 'main:volunteer' %}">VOLUNTEER WITH US</a></li>
+                        <li class="menu-item-1742"><a href="{% url 'main:careers' %}">CAREERS</a></li>
                     </ul>
                 </li>
-                <li class="menu-item-has-children"><a href="projects.html">Cases Study</a>
+                <li class="menu-item-has-children"><a href="#">CONSULTATION</a>
                     <ul class="sub-menu">
-                        <li><a href="projects.html">Cases Study 2 Columns</a></li>
-                        <li><a href="projects-2.html">Cases Study 3 Columns</a></li>
-                        
-                        <li><a href="project-detail.html">Cases Study Details</a></li>
+                        <li class="menu-item-1791"><a href="{% url 'main:expert_panelist' %}">EXPERT PANELISTS</a></li>
+                        <li class="menu-item-1758"><a href="{% url 'main:get_expert' %}">GET IN TOUCH WITH AN EXPERT</a></li>
+                        <li class="menu-item-1790"><a href="{% url 'main:trainings' %}">TRAININGS</a></li>
+                        <li class="menu-item-1760"><a href="{% url 'main:resources' %}">RESOURCES</a></li>
                     </ul>
                 </li>
-                <li class="menu-item-has-children"><a href="blog.html">Blog</a>
+                <li class="menu-item-has-children"><a href="#">MARKET LINKAGE</a>
                     <ul class="sub-menu">
-                        <li><a href="blog.html">Blog List</a></li>
-                        <li><a href="post.html">Blog Details</a></li>
+                        <li><a href="{% url 'main:get_connected_to_market' %}">GET CONNECTED TO THE MARKETS</a></li>
                     </ul>
                 </li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="{% url 'main:contact' %}">CONTACT US</a></li>
             </ul>
         </div>
     </div>

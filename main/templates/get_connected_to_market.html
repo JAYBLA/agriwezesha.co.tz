@@ -33,39 +33,54 @@
 </div>
 
 <div class="container">
-    <h1 style="padding-top: 5% !important;" class="text-center"><span class="page-headings text-uppercase">GET IN TOUCH WITH AN EXPERT</span></h1>
+    <h1 style="padding-top: 5% !important;" class="text-center"><span class="page-headings text-uppercase">Get Connected To The Market</span></h1>
     <hr class="divider-icon">
 
     <div class="row pb-3">
-        <div class="card">
-            <div class="card-body">
-                <form>
-                    <div class="form-group">
-                        <label style="font-size:24px">Your Name</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div class="form-group">
-                        <label style="font-size:24px">Your Mobile Number</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div class="form-group">
-                        <label style="font-size:24px">Village/Street</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div class="form-group">
-                        <label style="font-size:24px">District</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div class="form-group">
-                        <label style="font-size:24px">Region</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div class="form-group">
-                        <label  style="font-size:24px">Explain your issue that need to be taken care by our expert</label>
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                  </form>
+        <div class="col-md-10 offset-md-1">
+            <div class="card">
+                <div class="card-body">
+                    <form method="post" action="" id="market-info-form">
+                        {% csrf_token %}
+                        {% for hidden in form.hidden_fields %}
+                        {{ hidden }}
+                        {% endfor %}
+                        <div class="form-group">
+                            <label style="font-size:24px">Your Name</label>
+                            {% render_field form.name class="form-control" placeholder="Enter Your Name" %}
+                        </div>
+                        <div class="form-group">
+                            <label style="font-size:24px">Your Mobile Number</label>
+                            {% render_field form.phone class="form-control" placeholder="Phone Number" %}
+                        </div>
+                        <div class="form-group">
+                            <label style="font-size:24px">Village/Street</label>
+                            {% render_field form.village class="form-control" placeholder="Enter Your Village/Street" %}
+                        </div>
+                        <div class="form-group">
+                            <label style="font-size:24px">District</label>
+                            {% render_field form.district class="form-control" placeholder="Your District" %}
+                        </div>
+                        <div class="form-group">
+                            <label style="font-size:24px">Region</label>
+                            {% render_field form.region class="form-control" placeholder="Your Region" %}
+                        </div>
+                        <div class="form-group">
+                            <label  style="font-size:24px">What type of crop (s) are you selling? Or expecting to sell?</label>
+                            {% render_field form.crop class="form-control" placeholder="Write Here!" rows="3" %}
+                        </div>
+                        <div class="form-group">
+                            <label  style="font-size:24px">Explain about quantity of your crop (s) in terms of (kg) or tone?</label>
+                            {% render_field form.crop_qty class="form-control" placeholder="Write Here!" rows="3" %}
+                        </div>
+                        <div class="form-group">
+                            <label  style="font-size:24px">When the crops are will be ready for sell? ( Date , Month, Year)
+                            </label>
+                            {% render_field form.sell_time class="form-control" placeholder="Write Here!" rows="3" %}
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </form>
+                </div>
             </div>
         </div>
     </div>
@@ -74,6 +89,36 @@
 
 
 {% block javascript %}
+<script>
+    const form = document.getElementById('market-info-form');
+    form.addEventListener('submit', submitHandler)
+
+    function submitHandler(e){
+      e.preventDefault();
+      $.ajax({
+        type:'POST',
+        url:"{% url 'main:market_post' %}",
+        data:$("#market-info-form").serialize(),
+        success: function(data){
+          if (data.msg == 'success'){
+            form.reset();
+            Swal.fire({
+              icon: 'success',
+                title: 'Submitted Successfully!',
+                text: 'We will contact you as soon as possible!',
+            })
+          }else{
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Something went wrong!',
+            })
+          }
+        }
+      })
+    }
+
+  </script>
 {% endblock javascript %}
     
     
