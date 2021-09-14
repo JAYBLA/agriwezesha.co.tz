@@ -5,7 +5,7 @@
     //Preloader
     Royal_Preloader.config({
         mode           : 'logo',
-        logo           : '../static/images/logo.svg',
+        logo           : 'https://agriwezesha.co.tz/static/images/logo.svg',
         logo_size      : [187, 187],
         showProgress   : true,
         showPercentage : true,
