@@ -1732,9 +1732,6 @@ ul.info-list.info_on_right_side li:last-child {
     padding: 22px 35px 22px 35px;
   }
 
-  .header_mobile .mlogo_wrapper .mobile_logo {
-    float: left;
-  }
 
   #mmenu_toggle {
     position: relative;
@@ -1742,14 +1739,14 @@ ul.info-list.info_on_right_side li:last-child {
     float: right;
     width: 26px;
     height: 20px;
-    padding: 10px 0;
-    margin: 14px 0 0;
+    /* padding: 10px 0; */
+    /* margin: 14px 0 0; */
   }
 
   #mmenu_toggle button {
     position: absolute;
     left: 0;
-    top: 50%;
+    /* top: 50%; */
     margin: -2px 0 0;
     background: #173617;
     height: 4px;
@@ -1982,12 +1979,7 @@ ul.info-list.info_on_right_side li:last-child {
     right: 9px;
   }
 }
-@media only screen and (max-width: 320px) {
-  .mobile_logo img {
-    max-width: 230px;
-    max-height: 47px;
-  }
-}
+
 /* Blue Color */
 .mobile-header-blue .header_mobile .mlogo_wrapper {
   background-color: #173617;

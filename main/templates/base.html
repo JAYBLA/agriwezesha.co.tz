@@ -17,6 +17,11 @@
 	<link rel="stylesheet" id="consultax-style-css" href="{% static 'style.css' %}" type="text/css" media="all">
     <link rel="stylesheet" id="consultax-style-css" href="{% static 'custom.css' %}" type="text/css" media="all">
 
+    <!-- Owl Theme Default CSS -->
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+
 
 	<!-- RS5.0 Main Stylesheet -->
     <link rel="stylesheet" type="text/css" href="{% static 'revolution/css/settings.css' %}">
@@ -33,26 +38,13 @@
 
     <link rel="shortcut icon" href="{% static 'images/logo.svg' %}">
     <style>
-        .fixed-language-button{
-    position: fixed;
-    top: 88%;
-    right: 5%;
-    z-index: 30000;
-  }
-
-  @media only screen and (max-width: 768px) {
-      .fixed-language-button{
-      top: 78%;
-    }
-  }
-
-  .goog-logo-link {
+   .goog-logo-link {
         display:none !important;
     } 
         
     .goog-te-gadget {
         color: transparent !important;
-    }
+    } 
 
     .goog-te-banner-frame.skiptranslate {
     display: none !important;
@@ -126,7 +118,7 @@
     </script>
 
     
-  <div id="google_translate_element" class="fixed-language-button shadow-lg rounded pb-2 bg-warning"><span class="ml-4" style="font-size: 14px !important;">Change Language</span></div>
+  
   <script type="text/javascript">
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({pageLanguage: 'en',layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL }, 
@@ -136,6 +128,10 @@
   <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     <script src="{% static 'js/sweetalert2.js' %}"></script>
+    <!-- Owl Carousel JS -->
+    <script src="{% static 'js/owl.carousel.js' %}"></script>
+
+    <script src="{% static 'js/custom.js' %}"></script>
 
     
     {% block javascript %}

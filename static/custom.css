@@ -132,4 +132,62 @@ p{
     background: #6ba843 !important;
 }
 
+@media (max-width:768px){
+    .intro-slider-words{
+        font-size: 36px !important;
+        line-height: 1.5;
+    }
+    .intro-slider-container{
+        margin-top: -10px !important;
+    }
+
+}
+
+.footer-language-button{
+    margin-top: 2rem !important;
+}
+
+.mobile-logo{
+    width: 190px !important;
+    height: auto;
+}
+
+.mmenu_toggle{
+    margin-top: -15px !important;
+}
+
+
+/*
+Brand Area Style
+======================================================*/
+.brand-area {
+    margin-top: -30px;
+  }
+  
+  .single-brand {
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
+    padding: 20px 30px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 0 9px 3px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 0 9px 3px rgba(0, 0, 0, 0.05);
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  
+  .single-brand img {
+    height: 125px;
+    margin: auto;
+  }
+  
+  .single-brand:hover {
+    background-color: #6ba843;
+  }
+  
+
 
