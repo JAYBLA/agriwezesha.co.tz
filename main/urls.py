@@ -12,6 +12,7 @@ urlpatterns = [
     path('ajax-donation/', views.process_donation, name='donation_post'),
     path('history/', views.history,name='history'),
     path('careers/', views.careers,name='careers'), 
+    path('careers/announced-jobs', views.jobs,name='jobs'), 
     path('volunteer/', views.volunteer,name='volunteer'), 
     path('approach/', views.approach,name='approach'), 
     path('donate/', views.donate,name='donate'),

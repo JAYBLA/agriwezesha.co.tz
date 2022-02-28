@@ -50,6 +50,14 @@ def careers(request):
     }
     return render(request,template_name,context)
 
+def jobs(request):
+    template_name = 'jobs.html'
+    title="Announced Jobs"
+    context = {
+        "title":title,
+    }
+    return render(request,template_name,context)
+
 def expert_panelist(request):
     template_name = 'expert_panelist.html'
     title="Expert Panelist"
