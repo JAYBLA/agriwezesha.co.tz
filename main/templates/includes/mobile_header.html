@@ -32,11 +32,6 @@
                     <ul class="sub-menu">
                         <li class="menu-item-1738"><a href="{% url 'main:donate' %}">DONATE NOW</a></li>
                         <li class="menu-item-1745"><a href="{% url 'main:volunteer' %}">VOLUNTEER WITH US</a></li>
-                        <li class="menu-item-1742"><a href="{% url 'main:careers' %}">CAREERS</a>
-                            <ul class="sub-menu">
-                                <li class="menu-item-1738"><a href="{% url 'main:jobs' %}">ANNOUNCED JOBS</a></li>                                               
-                            </ul>
-                        </li>
                     </ul>
                 </li>
                 <li class="menu-item-has-children"><a href="#">CONSULTATION</a>
@@ -52,6 +47,7 @@
                         <li><a href="{% url 'main:get_connected_to_market' %}">GET CONNECTED TO THE MARKETS</a></li>
                     </ul>
                 </li>
+                <li><a href="{% url 'main:jobs' %}">CAREERS</a></li> 
                 <li><a href="{% url 'main:contact' %}">CONTACT US</a></li>
             </ul>
         </div>
