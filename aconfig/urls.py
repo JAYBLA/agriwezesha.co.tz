@@ -19,6 +19,9 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('JAYBLA-admin/', admin.site.urls),
+    path('admin/',include('dashboard.urls',namespace='dashboard')),
+    path('users/',include('users.urls',namespace='users')),
+    path('projects/',include('projects.urls',namespace='projects')),
     path('',include('main.urls',namespace='main'))
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

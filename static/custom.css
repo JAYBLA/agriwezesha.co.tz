@@ -49,6 +49,17 @@ p{
     width: 100%;
 }
 
+.partiner-image-container{
+    height: 600px !important;
+}
+
+.partiner-image-container img{
+    height: 600px;
+    object-fit: cover;
+    width: 100%;
+}
+
+
 .contact-image-container .card-body {
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;

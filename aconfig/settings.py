@@ -41,9 +41,10 @@ else:
 INSTALLED_APPS = [
     #Custom Apps
     'main',
-    'blog',
     'users',
+    'blog',
     'dashboard',
+    'projects',
     
     
     #Django Apps

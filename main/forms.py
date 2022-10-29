@@ -23,3 +23,7 @@ class DonateForm(forms.ModelForm):
         model = Donate
         fields= '__all__'
 
+class PartinerForm(forms.ModelForm):
+    class Meta:
+        model = Partiner
+        fields= ['name', 'organization', 'address', 'city','country', 'message']

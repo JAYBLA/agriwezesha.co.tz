@@ -13,7 +13,11 @@ from django.utils.html import strip_tags
 def home(request):
     template_name = 'home.html'
     form = ContactForm()
-    context = {'form':form,}
+    partiner_form = PartinerForm()
+    context = {
+        'form':form,
+        'partiner_form':partiner_form,
+        }
     return render(request,template_name,context)
 
 def history(request):
@@ -309,6 +313,44 @@ def process_donation(request):
             plain_message = strip_tags(html_message)
             recipient_list = ['agriwezesha@gmail.com',]
             from_email = "contact@agriwezesha.co.tz"
+            mail.send_mail(subject,plain_message, from_email, recipient_list, html_message=html_message,fail_silently=False,)
+
+            return JsonResponse({'msg': 'success'}, safe=False)
+        else:
+            return JsonResponse({'msg': 'error'})
+
+def process_partiner(request):
+    if request.is_ajax():
+        if request.method == 'POST':
+            name = request.POST['name'],
+            organization = request.POST['organization'],            
+            address = request.POST['address'],
+            city = request.POST['city'],
+            country = request.POST['country'],
+            message = request.POST['message'],
+            
+            partiner = Partiner(
+                name=name,               
+                organization=organization,
+                address=address,
+                city=city,
+                country=country,                
+                message=message
+                
+            )
+            partiner.save()
+            subject = 'Partinership Request'
+            html_message = render_to_string('partiner_mail_template.html', {
+                'name':name,               
+                'organization':organization,
+                'address':address,
+                'city':city,
+                'country':country,                
+                'message':message, 
+            })
+            plain_message = strip_tags(html_message)
+            recipient_list = ['agriwezesha@gmail.com',]
+            from_email = "info@agriwezesha.co.tz"
             mail.send_mail(subject,plain_message, from_email, recipient_list, html_message=html_message,fail_silently=False,)
 
             return JsonResponse({'msg': 'success'}, safe=False)

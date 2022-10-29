@@ -49,3 +49,16 @@ class Donate(models.Model):
     
     def __str__(self):
         return self.name
+
+class Partiner(models.Model):
+    name = models.CharField(max_length=200)
+    organization = models.CharField(max_length=200)
+    address = models.CharField(max_length=200)
+    city = models.CharField(max_length=200)
+    country = models.CharField(max_length=200)
+    message = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    modified_at = models.DateTimeField(auto_now=True)
+    
+    def __str__(self):
+        return self.name

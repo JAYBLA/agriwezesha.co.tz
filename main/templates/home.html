@@ -225,6 +225,57 @@
 </div>
 </div>
 <!-- End Brand Area -->
+
+<section class="wpb_row row-fluid section-padd" style="background-color: #336633;">
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-md-6 partiner-image-container">                                  
+                <img src="{% static 'images/partiner.png' %}" alt="partiner">  
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <h4 class="card-header text-capitalize">Drop us a message if you would like to partner with us.</h4>
+                    <div class="card-body">
+                        <form action="" method="post" id="AgriwezeshapartinerForm">
+                            {% csrf_token %}
+                            {% for hidden in partiner_form.hidden_fields %}
+                            {{ hidden }}
+                            {% endfor %}
+                            <div class="row">
+                                <div class="col-md-12 form-group">
+                                <label><b>Your Name</b></label>
+                                {% render_field partiner_form.name class="form-control" %}
+                                </div>
+                                <div class="col-md-12 form-group">
+                                <labe><b>Name of the organization</b></label>
+                                {% render_field partiner_form.organization class="form-control" %}
+                                </div>
+                                <div class="col-md-12 form-group">
+                                    <label><b>Address</b></label>
+                                    {% render_field partiner_form.address class="form-control" %}
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label><b>City</b></label>
+                                    {% render_field partiner_form.city class="form-control" %}
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label><b>Country</b></label>
+                                    {% render_field partiner_form.country class="form-control" %}
+                                </div>
+                                <div class="col-md-12 form-group">
+                                    <label><b>Message</b></label>
+                                    {% render_field partiner_form.message class="form-control" rows="5" %}
+                                </div>
+                            </div>
+                            <button class="btn btn-primary rounded rounded-5 btn-block d-flex align-items-center justify-content-center" type="submit"><i class="fa fa-2x fa-share-square-o"></i><span style="font-size: 1.5rem;">&nbsp;Send Request</span> </button>
+                          </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock content %}
 
 
@@ -258,6 +309,36 @@
       })
     }
 
+  </script>
+
+<script>
+    const partinerform = document.getElementById('AgriwezeshapartinerForm');
+    partinerform.addEventListener('submit', submitHandler)
+
+    function submitHandler(e){
+      e.preventDefault();
+      $.ajax({
+        type:'POST',
+        url:"{% url 'main:partiner_post' %}",
+        data:$("#AgriwezeshapartinerForm").serialize(),
+        success: function(data){
+          if (data.msg == 'success'){
+            form.reset();
+            Swal.fire({
+              icon: 'success',
+                title: 'Request Sent!',
+                text: 'We will respond as soon as possible!',
+            })
+          }else{
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Something went wrong!',
+            })
+          }
+        }
+      })
+    }
   </script>
 {% endblock javascript %}
     

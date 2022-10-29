@@ -7,6 +7,7 @@ urlpatterns = [
     path('', views.home,name='site-home'),
     path('contact/', views.contact,name='contact'),
     path('ajax-contact/', views.process_contact, name='contact_post'),
+    path('ajax-partiner/', views.process_partiner, name='partiner_post'),
     path('ajax-expert/', views.process_expert, name='expert_post'),
     path('ajax-market/', views.process_market, name='market_post'),
     path('ajax-donation/', views.process_donation, name='donation_post'),
