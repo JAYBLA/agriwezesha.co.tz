@@ -1,0 +1,51 @@
+{% extends 'main_dashboard.html' %}
+{% load static %}
+{% block content %}
+<div class="row">
+    <div class="col-md-10 offset-md-1">
+        <div class="card">
+            <div class="card-header">
+              <h3 class="card-title"><strong>Jobs Ever Announced</strong></h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <table id="jobs-list" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th>SN</th>
+                  <th>Responsibilities</th>
+                  <th>Skills</th>
+                  <th>Qualifications</th>
+                  <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                    {% for job in jobs %}
+                <tr>
+                  <td>{{forloop.counter | safe }}</td>
+                  <td>{{job.responsibilities | safe }}</td>
+                  <td>{{job.skills | safe }}</td>
+                  <td>{{job.qualifications | safe }}</td>
+                  <td>Butons</td>
+                </tr>
+                   {% endfor %}
+                </tbody>
+              </table>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->
+    </div>
+</div>
+{% endblock content %}
+
+
+{% block javascript %}
+    <script>
+        $(document).ready(function () {
+            $('#jobs-list').DataTable();
+        });
+    </script>
+{% endblock javascript %}
+    
+    

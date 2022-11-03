@@ -20,7 +20,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('JAYBLA-admin/', admin.site.urls),
-    path('admin/',include('dashboard.urls',namespace='dashboard')),
+    path('dashboard/',include('dashboard.urls',namespace='dashboard')),
     path('users/',include('users.urls',namespace='users')),
     path('projects/',include('projects.urls',namespace='projects')),
     path('',include('main.urls',namespace='main'))

@@ -1,0 +1,38 @@
+{% extends 'main_dashboard.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <div class="card">
+            <form action="." method="post" novalidate>
+                {% csrf_token %}
+                {% for hidden in form.hidden_fields %}
+                {{ hidden }}
+                {% endfor %}
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>Title</label>
+                        {% render_field form.title class="form-control" %}
+                    </div>
+                    <div class="form-group">
+                        <label>Key responsibilities</label><br>
+                        {% render_field form.responsibilities  rows="8" id="reseditor" %}
+                    </div>
+                    <div class="form-group">
+                        <label>Reqired Skills</label><br>
+                        {% render_field form.skills  rows="8" id="skillseditor" %}                        
+                    </div>
+                    <div class="form-group">
+                        <label>Preferred Qualifications</label><br>
+                        {% render_field form.qualifications  rows="8" id="qualeditor" %}                        
+                    </div>
+                </div> 
+                    <button type="submit" class="btn btn-primary btn-lg"><i class="fa fa-check-square-o"></i> Submit now</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+    
