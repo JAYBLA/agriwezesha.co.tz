@@ -1,11 +1,9 @@
-{% extends "main/base.html" %}
+{% extends "authbase.html" %}
 {% block content %}    
-<h2>You have been Logged out</h2>
-        
-        <div class="border-top pt-3">
-            <small class="text-muted">
-                <a class="ml-2" href="{% url 'login' %}">Login Again</a>
-            </small>
-        </div>
-   
+<div class="text-center mt-5 text-lg fs-4">
+    <p class='text-gray-600'>You Have Been Logged Out! <a href="{% url login %}"
+            class="font-bold">Log
+            in Again!</a>
+    </p> 
+    </div>   
 {% endblock content %}

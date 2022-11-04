@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.http import JsonResponse
 from .forms import *
 from .models import *
+from dashboard.models import *
 
 from django.core import mail
 from django.template.loader import render_to_string
@@ -57,8 +58,10 @@ def careers(request):
 def jobs(request):
     template_name = 'jobs.html'
     title="Announced Jobs"
+    jobs =Job.objects.all().order_by('-created_at')
     context = {
         "title":title,
+        "jobs":jobs,
     }
     return render(request,template_name,context)
 
@@ -109,6 +112,14 @@ def statistics(request):
 def stories(request):
     template_name = 'stories.html'
     title="Stories Of Hope"
+    context = {
+        "title":title,
+    }
+    return render(request,template_name,context)
+
+def projects(request):
+    template_name = 'projects.html'
+    title="Our Projects"
     context = {
         "title":title,
     }

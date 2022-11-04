@@ -42,9 +42,7 @@ INSTALLED_APPS = [
     #Custom Apps
     'main',
     'users',
-    'blog',
     'dashboard',
-    'projects',
     
     
     #Django Apps

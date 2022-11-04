@@ -1,32 +1,12 @@
 {% extends 'authbase.html' %}
 {% load static %}
-
-
-{% block title %}
-  Login Page
-{% endblock title %}
   
 {% block content %}
-
-    <!-- ============================================================== -->
-    <!-- login page  -->
-    <!-- ============================================================== -->
-    <div class="splash-container">
-      <div class="card ">
-          <div class="card-header text-center"><a href="/"><img src="{% static 'dashboard/assets/images/logo.png' %}" alt="logo" style="height:60px !important; width:auto;"></a></div>
-          <div class="card-body">
-            <form method="POST" action="">
-              {% csrf_token %}
-            {% include 'includes/bs5_form.html' with form=form %}  
-            <div class="d-grid">
-              <button class="btn btn-block btn-secondary rounded-pill mt-3">Login</button>
-            </div>
-          </form>
-          </div>
+    <form method="POST" action="">
+        {% csrf_token %}
+      {% include 'includes/bs5_form.html' with form=form %}  
+      <div class="d-grid">
+        <button class="btn btn-block btn-secondary rounded-pill mt-3 bg-agriwezesha">Login</button>
       </div>
-  </div>
-
-  <!-- ============================================================== -->
-  <!-- end login page  -->
-  <!-- ============================================================== -->
+    </form>
 {% endblock content %}

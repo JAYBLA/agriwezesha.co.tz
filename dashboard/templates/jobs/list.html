@@ -11,30 +11,35 @@
             <div class="card-body">
               <table id="jobs-list" class="table table-bordered table-striped">
                 <thead>
-                <tr>
-                  <th>SN</th>
-                  <th>Responsibilities</th>
-                  <th>Skills</th>
-                  <th>Qualifications</th>
-                  <th>Action</th>
-                </tr>
+                  <tr>
+                    <th>SN</th>
+                    <th>Responsibilities</th>
+                    <th>Skills</th>
+                    <th>Qualifications</th>
+                    <th>Action</th>
+                  </tr>
                 </thead>
                 <tbody>
                     {% for job in jobs %}
-                <tr>
-                  <td>{{forloop.counter | safe }}</td>
-                  <td>{{job.responsibilities | safe }}</td>
-                  <td>{{job.skills | safe }}</td>
-                  <td>{{job.qualifications | safe }}</td>
-                  <td>Butons</td>
-                </tr>
+                    <tr>
+                      <td>{{forloop.counter | safe }}</td>
+                      <td>{{job.responsibilities | safe }}</td>
+                      <td>{{job.skills | safe }}</td>
+                      <td>{{job.qualifications | safe }}</td>
+                      <td>
+                        <a href="{% url 'dashboard:job-detail' job.id %}" style="cursor:pointer;font-size: 22px">
+                          <i class="fa fa-edit text-warning"> Edit</i>
+                        </a><br>
+                        <a href="{% url 'dashboard:delete-job' job.id %}" style="cursor:pointer;font-size: 22px">
+                          <i class="fa fa-trash text-danger">Delete</i>
+                        </a>
+                      </td>
+                    </tr>
                    {% endfor %}
                 </tbody>
               </table>
-            </div>
-            <!-- /.card-body -->
-          </div>
-          <!-- /.card -->
+            </div>            
+          </div>          
     </div>
 </div>
 {% endblock content %}

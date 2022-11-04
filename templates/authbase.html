@@ -1,40 +1,39 @@
 {% load static %}
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
- 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>OfficeManager |{% block title %}{% endblock title %}</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{% static 'dashboard/assets/vendor/bootstrap/css/bootstrap.min.css' %}">
-    <link href="{% static 'dashboard/assets/vendor/fonts/circular-std/style.css' %}" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'dashboard/assets/css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'dashboard/assets/css/custom.css' %}">
-    <link rel="stylesheet" href="{% static 'dashboard/assets/vendor/fonts/fontawesome/css/fontawesome-all.css' %}">
-    <style>
-        html,
-        body {
-            height: 100%;
-        }
 
-        body {
-            display: -ms-flexbox;
-            display: flex;
-            -ms-flex-align: center;
-            align-items: center;
-            padding-top: 40px;
-            padding-bottom: 40px;
-        }
-    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login -Admin Panel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'auth/assets/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'auth/assets/vendors/bootstrap-icons/bootstrap-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'auth/assets/css/app.css' %}">
+    <link rel="stylesheet" href="{% static 'auth/assets/css/pages/auth.css' %}">
 </head>
 
 <body>
-    {% block content %}{% endblock content %}
-    <!-- Optional JavaScript -->
-    <script src="{% static 'dashboard/assets/vendor/jquery/jquery-3.3.1.min.js' %}"></script>
-    <script src="{% static 'dashboard/assets/vendor/bootstrap/js/bootstrap.bundle.js' %}"></script>
+    <div id="auth">
+
+        <div class="row h-100">
+            <div class="col-lg-6 d-none d-lg-block">
+                <div id="auth-right">
+                </div>
+            </div>
+            <div class="col-lg-6 col-12">
+                <div id="auth-left">
+                    <div class="auth-logo d-flex justify-content-center">
+                        <a href="#"><img src="{% static 'images/logo.svg' %}" alt="Logo" syle="width:300px !important; height:auto;"></a>
+                    </div>                    
+                    {% block content %}
+                        
+                    {% endblock content %} 
+                </div>
+            </div>
+
+        </div>
+
+    </div>
 </body>
- 
 </html>
