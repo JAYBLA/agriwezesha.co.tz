@@ -4,6 +4,7 @@ from django.contrib import messages
 from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
 
 
+
 def register(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
@@ -11,7 +12,7 @@ def register(request):
             form.save()
             username = form.cleaned_data.get('username')
             messages.success(request, f'Your Account has been created and you can login!')
-            return redirect('users:login')    
+            return redirect(to ='users:login')    
     else:
         form = UserRegisterForm()
     return render(request, 'users/register.html', { 'form': form})
@@ -28,12 +29,11 @@ def profile(request):
             u_form.save()
             p_form.save()
             messages.success(request, f'Your account has been updated!')
-            return redirect('users/profile')
+            return redirect(to ='users:profile')
 
     else:
         u_form = UserUpdateForm(instance=request.user)
         p_form = ProfileUpdateForm(instance=request.user.profile)
-
     
     context = {
         'u_form': u_form,

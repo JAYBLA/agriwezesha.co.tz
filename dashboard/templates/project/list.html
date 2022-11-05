@@ -5,32 +5,28 @@
     <div class="col-md-10 offset-md-1">
         <div class="card">
             <div class="card-header">
-              <h3 class="card-title"><strong>Jobs Ever Announced</strong></h3>
+              <h3 class="card-title"><strong>Projects List</strong></h3>
             </div>
             <!-- /.card-header -->
             <div class="card-body">
               <table id="jobs-list" class="table table-bordered table-striped">
                 <thead>
                   <tr>
-                    <th>SN</th>
-                    <th>Responsibilities</th>
-                    <th>Skills</th>
-                    <th>Qualifications</th>
+                    <th>SN</th>                    
+                    <th>Project Name</th>
                     <th>Action</th>
                   </tr>
                 </thead>
                 <tbody>
                     {% for p in projects %}
                     <tr>
-                      <td>{{forloop.counter | safe }}</td>
-                      <td>{{job.responsibilities | safe }}</td>
-                      <td>{{job.skills | safe }}</td>
-                      <td>{{job.qualifications | safe }}</td>
+                      <td>{{forloop.counter}}</td>
+                      <td>{{p.name}}</td>
                       <td>
-                        <a href="{% url 'dashboard:job-detail' job.id %}" style="cursor:pointer;font-size: 22px">
+                        <a href="{% url 'dashboard:project-detail' p.id %}" style="cursor:pointer;font-size: 22px">
                           <i class="fa fa-edit text-warning"> Edit</i>
                         </a><br>
-                        <a href="{% url 'dashboard:delete-job' job.id %}" style="cursor:pointer;font-size: 22px">
+                        <a href="{% url 'dashboard:delete-project' p.id %}" style="cursor:pointer;font-size: 22px">
                           <i class="fa fa-trash text-danger">Delete</i>
                         </a>
                       </td>

@@ -41,8 +41,8 @@ else:
 INSTALLED_APPS = [
     #Custom Apps
     'main',
-    'users',
     'dashboard',
+    'users',
     
     
     #Django Apps
@@ -89,6 +89,7 @@ TEMPLATES = [
     },
 ]
 
+
 WSGI_APPLICATION = 'aconfig.wsgi.application'
 
 
@@ -133,7 +134,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
@@ -158,8 +158,7 @@ if not DEBUG:
     MEDIA_ROOT = '/home/agriwez1/public_html/media'
     STATIC_ROOT = '/home/agriwez1/public_html/static'
 else:
-    MEDIA_ROOT = '/media'
-    STATIC_ROOT = '/static'
+    MEDIA_ROOT = 'media/'   
     
     
 STATICFILES_DIRS = [BASE_DIR / 'static']
@@ -190,3 +189,7 @@ else:
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_URL = 'users:login'
+LOGIN_REDIRECT_URL ='dashboard:home'
+LOGOUT_REDIRECT_URL = 'users:login'

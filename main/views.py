@@ -118,10 +118,12 @@ def stories(request):
     return render(request,template_name,context)
 
 def projects(request):
+    projects = Project.objects.all()
     template_name = 'projects.html'
     title="Our Projects"
     context = {
         "title":title,
+        'projects':projects,
     }
     return render(request,template_name,context)
 

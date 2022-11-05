@@ -1,0 +1,26 @@
+{% extends 'main_dashboard.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <div class="card">
+            <form action="." method="post" novalidate>
+                {% csrf_token %}
+                {% for hidden in form.hidden_fields %}
+                {{ hidden }}
+                {% endfor %}
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>Name Of The project</label>
+                        {% render_field form.name class="form-control" %}
+                    </div>                    
+                </div> 
+                    <button type="submit" class="btn btn-primary btn-lg ml-3 mb-3"><i class="fa fa-check-square-o"></i> Add This Project</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+    

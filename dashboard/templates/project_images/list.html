@@ -1,0 +1,49 @@
+{% extends 'main_dashboard.html' %}
+{% load static %}
+{% block content %}
+<div class="row">
+    <div class="col-md-10 offset-md-1">
+        <div class="card">
+            <div class="card-header">
+              <h3 class="card-title"><strong>Project Photos</strong></h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <table id="jobs-list" class="table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th>SN</th>                    
+                    <th>Photo</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    {% for i in images %}
+                    <tr>
+                      <td>{{forloop.counter}}</td>
+                      <td><img src="{{i.images.url}}" alt="Image" style="height:80px;width:auto;"></td>
+                      <td>
+                        <a href="{% url 'dashboard:delete-project-image' i.id %}" style="cursor:pointer;font-size: 22px">
+                          <i class="fa fa-trash text-danger">Delete</i>
+                        </a>
+                      </td>
+                    </tr>
+                   {% endfor %}
+                </tbody>
+              </table>
+            </div>            
+          </div>          
+    </div>
+</div>
+{% endblock content %}
+
+
+{% block javascript %}
+    <script>
+        $(document).ready(function () {
+            $('#jobs-list').DataTable();
+        });
+    </script>
+{% endblock javascript %}
+    
+    

@@ -29,8 +29,7 @@ class Project(models.Model):
         return self.name
 
 class MultipleImage(models.Model):
-    project = models.ForeignKey(
-        "Project", on_delete=models.CASCADE)
+    project = models.ForeignKey("Project", on_delete=models.CASCADE)
     images = models.FileField()
     created_at = models.DateTimeField(auto_now_add=True)
     modified_at = models.DateTimeField(auto_now=True)
