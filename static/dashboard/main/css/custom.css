@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
+.mt-50{
+    margin-top:50px !important;
+}
+
+.mb-150{
+    margin-top:120px !important;
+}
+
+.editor-100{
+    width: 100% !important;
+}
+.django-ckeditor-widget{
+    width:100% !important;
+}
