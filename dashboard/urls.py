@@ -17,7 +17,8 @@ urlpatterns = [
     #Projects
     path('projects/', projectlist,name='projectlist'),
     path('projects/new/', create_project, name='create_project'),
-    path('projects/<int:p_id>/', project_detail, name='project-detail'),
+    path('projects/<int:project_id>/', project_detail, name='project-detail'),
+    path('projects/<int:p_id>/update/', update_project, name='update-project'),
     path('projects/<int:p_id>/delete/', project_delete, name='delete-project'),
 
     #Project_Images

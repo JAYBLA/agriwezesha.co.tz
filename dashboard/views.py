@@ -135,13 +135,22 @@ def projectlist(request):
     return render(request,template_name,context)
 
 @login_required(login_url='users:login')
-def project_detail(request,p_id):
+def project_detail(request,project_id):
     template = 'project/detail.html'    
-    project = get_object_or_404(Project, pk =p_id)   
+    project = get_object_or_404(Project, pk =project_id)   
     context = {
         'project' :project,      
     }    
     return render(request, template,context)
+
+@login_required(login_url='users:login')
+def update_project(request, p_id):
+    template = 'jobs/update.html'
+    project = get_object_or_404(Project, pk=p_id)
+
+    project.name = request.POST['name']
+    project.save()
+    return redirect(to="dashboard:projectlist")
 
 @login_required(login_url='users:login')
 def project_delete(request,p_id):     

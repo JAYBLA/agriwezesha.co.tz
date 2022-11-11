@@ -104,20 +104,22 @@
 <section class="wpb_row row-fluid row-o-equal-height row-flex section-padd">
     <div class="container">
         {% for p in projects %}
-        <div class="row">            
-            <h4>{{forloop.counter}}. &nbsp;{{p.name}}</h4>                
-                {% for i in p.multipleimage_set.all %}
-                <div class="wpb_column column_container col-sm-6 col-md-4">
-                    <div class="column-inner">
-                        <div class="wpb_wrapper">
-                            <div class="service-box image-box">
-                                <img width="750" height="460" src="{{i.images.url}}" alt="Image">                            
-                            </div>
-                            <div class="empty_space_30"></div>
+        <div class="row mb-3">
+            <h4>{{forloop.counter}}. &nbsp;{{p.name}}</h4>
+        </div>
+        <div class="row">  
+            {% for i in p.multipleimage_set.all %}
+            <div class="wpb_column column_container col-sm-6 col-md-4">
+                <div class="column-inner">
+                    <div class="wpb_wrapper">
+                        <div class="service-box image-box">
+                            <img width="750" height="460" src="{{i.images.url}}" alt="Image">                            
                         </div>
+                        <div class="empty_space_30"></div>
                     </div>
                 </div>
-                {% endfor %}            
+            </div>
+            {% endfor %}            
         </div>
         {% endfor %}
     </div>
