@@ -208,3 +208,56 @@ def project_photo_delete(request,image_id):
     image = get_object_or_404(MultipleImage, pk =image_id)   
     image.delete()
     return redirect(to="dashboard:images")
+
+
+# AGROFOREST PROJECT
+@login_required(login_url='users:login')
+def create_agroforest(request):
+    template_name = 'agroforest/create.html'
+    if request.POST:
+        form = AgroforestForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request,'Submitted Successfully', extra_tags='alert alert-success')
+            return redirect(to='dashboard:agroforestlist')
+        else:
+            messages.error(request, 'An error occured', extra_tags='alert alert-danger')
+    else:
+        form = AgroforestForm()
+    context = {'form':form}
+    return render(request,template_name,context)
+
+@login_required(login_url='users:login')
+def agroforestlist(request):
+    agroforests = Agroforest.objects.all().order_by('-created_at')
+    template_name = 'agroforest/list.html' 
+    context = {
+        'agroforests':agroforests,
+    }
+    return render(request,template_name,context)
+
+@login_required(login_url='users:login')
+def agroforest_detail(request,project_id):
+    template = 'agroforest/detail.html'    
+    agroforest = get_object_or_404(Agroforest, pk =project_id)   
+    context = {
+        'project' :agroforest,      
+    }    
+    return render(request, template,context)
+
+@login_required(login_url='users:login')
+def update_agroforest(request, p_id):    
+    project = get_object_or_404(Agroforest, pk=p_id)
+
+    project.name = request.POST['name']
+    project.trees = request.POST['trees']
+    project.acres = request.POST['acres']
+    project.people = request.POST['people']
+    project.save()
+    return redirect(to="dashboard:agroforestlist")
+
+@login_required(login_url='users:login')
+def agroforest_delete(request,p_id):     
+    project = get_object_or_404(Agroforest, pk =p_id)   
+    project.delete()
+    return redirect(to="dashboard:agroforestlist")

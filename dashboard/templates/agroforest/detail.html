@@ -1,0 +1,38 @@
+{% extends 'main_dashboard.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <div class="card">
+            <form action="{% url 'dashboard:update-agroforest' project.id %}" method="post" novalidate>
+                {% csrf_token %}
+                {% for hidden in form.hidden_fields %}
+                {{ hidden }}
+                {% endfor %}
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>Name Of Agroforest project</label>
+                        <input type="text" class="form-control" name="name" value="{{project.name}}">
+                    </div>
+                    <div class="form-group">
+                        <label>Trees Planted</label>
+                        <input type="text" class="form-control" name="trees" value="{{project.trees}}">
+                    </div>
+                    <div class="form-group">
+                        <label>Acres Restored</label>
+                        <input type="text" class="form-control" name="acres" value="{{project.acres}}">
+                    </div>
+                    <div class="form-group">
+                        <label>People Benefited</label>
+                        <input type="text" class="form-control" name="people" value="{{project.people}}">
+                    </div>                   
+                </div> 
+                    <button type="submit" class="btn btn-primary btn-lg ml-3 mb-3"><i class="fa fa-check-square-o"></i> Update</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+    

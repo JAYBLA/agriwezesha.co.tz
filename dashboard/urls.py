@@ -24,5 +24,12 @@ urlpatterns = [
     #Project_Images
     path('project-images/', images,name='images'),
     path('project-images/new/', project_images, name='add_images'),    
-    path('project-images/<int:image_id>/delete/', project_photo_delete, name='delete-project-image'),     
+    path('project-images/<int:image_id>/delete/', project_photo_delete, name='delete-project-image'),
+    
+        #Agroforests
+    path('agroforests/', agroforestlist,name='agroforestlist'),
+    path('agroforests/new/', create_agroforest, name='create_agroforest'),
+    path('agroforests/<int:project_id>/', agroforest_detail, name='agroforest-detail'),
+    path('agroforests/<int:p_id>/update/', update_agroforest, name='update-agroforest'),
+    path('agroforests/<int:p_id>/delete/', agroforest_delete, name='delete-agroforest'),     
 ]

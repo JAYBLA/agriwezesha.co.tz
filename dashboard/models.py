@@ -33,5 +33,14 @@ class MultipleImage(models.Model):
     images = models.FileField()
     created_at = models.DateTimeField(auto_now_add=True)
     modified_at = models.DateTimeField(auto_now=True)
-
+class Agroforest(models.Model):
+    name = models.CharField(max_length=200)
+    trees = models.IntegerField()
+    people = models.IntegerField()
+    acres = models.DecimalField(max_digits=12, decimal_places=3)
+    created_at = models.DateTimeField(auto_now_add=True)
+    modified_at = models.DateTimeField(auto_now=True)
+    
+    def __str__(self):
+        return self.name
     

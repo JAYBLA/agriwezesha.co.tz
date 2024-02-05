@@ -59,6 +59,7 @@ INSTALLED_APPS = [
 
     'ckeditor',
     'bootstrap_modal_forms',
+    'django.contrib.humanize'
 ]
 
 MIDDLEWARE = [

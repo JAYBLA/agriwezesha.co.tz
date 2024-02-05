@@ -21,4 +21,7 @@ class ProjectPhotosForm(forms.ModelForm):
         model = MultipleImage
         fields = ['images']
 
-                
+class AgroforestForm(forms.ModelForm):
+    class Meta:
+        model = Agroforest
+        fields= ['name', 'trees', 'acres', 'people']

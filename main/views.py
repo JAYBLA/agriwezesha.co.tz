@@ -15,9 +15,11 @@ def home(request):
     template_name = 'home.html'
     form = ContactForm()
     partiner_form = PartinerForm()
+    agroforest = Agroforest.objects.all()
     context = {
         'form':form,
         'partiner_form':partiner_form,
+        'agroforest':agroforest,
         }
     return render(request,template_name,context)
 

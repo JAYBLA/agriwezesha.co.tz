@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load widget_tweaks %}
+{% load humanize %}
 
 {% block title %}
     We connect and support small holder farmers
@@ -70,7 +71,7 @@
 <section class="mission-section py-4 my-3">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <h4 class="color-dark" translate="no">Agriwezesha</h4>
                 <p>We are  a Non Governmental Organization (NGO) founded and registered in 2019 under the Non-Government Organization Act of 2002. <br>
                 Our main purpose is to work closely with small-holder farmers in Tanzania to enhance agricultural productivity by providing education/training and consultations on modern farming practices as well as improving farmers’ market connections.
@@ -83,6 +84,18 @@
                     <div class="text-light"><p>To attain increased agricultural productivity and improved market connections for small-holder farmers in Tanzania.</p></div>
                     <div><h4 class="color-dark">Our Mission</h4></div>
                     <div class="text-light"><p>To boost productivity and improve market connections in Tanzania by regarding the use of modern farming practices and technology which is affordable by small-holder farmers.</p></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="jdzBox">
+                    <h2>OUR OBJECTIVES</h2>
+                    <ul>
+                        <li><span>1</span>To develop and implement programs which support small holder farmers on their lively hoods and the ecosystem</li>
+                        <li><span>2</span>To initiate and implement environmental conservation programs in collaboration with small holder farmers.</li>
+                        <li><span>3</span>To support small holder farmers on easily access of the markets for their produce.</li>
+                        <li><span>4</span>To develop digital farmers’ services which aim at increasing the farmers’ working efficiency.</li>
+                        <li><span>5</span>To initiate programs which guarantee food security to the farmers’ communities within Tanzania.</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -126,7 +139,62 @@
         </div>
     </div>
 </section>
-
+<section class="funfact-sec section-padding-fun">
+    <div class="container">
+        <div class="row">
+            <div class="wpb_column column_container col-sm-12">
+                <div class="column-inner">
+                    <div class="wpb_wrapper">
+                        <div class="section-head ">
+                            <h2 class="section-title text-light">Agroforestry Project</h2>
+                        </div>
+    
+                        <div class="wpb_text_column wpb_content_element">
+                            <div class="wpb_wrapper">
+                                <p class="text-light">Agriwezesha is implementing tree planting project through the adaptation of Agroforestry practices and reforestation in the Morogoro Region in Mvomero
+                                    In the year 202/23. <br><br>Agriwezesha planted 444,067 trees both fruit trees, this project is funded by Reforestation with the main purposes of conserving the environment and empowering economic well-being of the farms.
+                                    <br><br>Our heartfelt thanks go to ReforestAction for supporting this project which created a lot of impact on the community as well as on the environment
+                                    </p>
+                                <div class="empty_space_30"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% for a in agroforest %}
+        <div class="row">
+            <div class="col-md-4 col-sm-6">
+                <div class="counter-section">
+                    <div class="counter-icon">
+                        <img src="{% static 'images/tree.png' %}" alt="tree">
+                    </div>
+                    <span class="counter-value">{{a.trees}}</span>
+                    <h3>Trees planted</h3>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="counter-section blue">
+                    <div class="counter-icon">
+                        <img src="{% static 'images/land.png' %}" alt="land">
+                    </div>
+                    <span class="counter-value">{{a.acres}}</span>
+                    <h3>Acres Restored</h3>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="counter-section blue">
+                    <div class="counter-icon">
+                        <img src="{% static 'images/people.png' %}" alt="people">
+                    </div>
+                    <span class="counter-value">{{a.people}}</span>
+                    <h3>People</h3>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
 <section class="">
     <div class="container-fluid">
         <div class="row bg-dark d-flex align-items-center">

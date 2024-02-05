@@ -1,0 +1,58 @@
+{% extends 'main_dashboard.html' %}
+{% load static %}
+{% block content %}
+<div class="row">
+    <div class="col-md-10 offset-md-1">
+        <div class="card">
+            <div class="card-header">
+              <h3 class="card-title"><strong>Agroforest Projects</strong></h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <table id="jobs-list" class="table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th>SN</th>                    
+                    <th>Agroforest Project Name</th>
+                    <th>Trees Planted</th>
+                    <th>Acres Restored</th>
+                    <th>People</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    {% for p in agroforests %}
+                    <tr>
+                      <td>{{forloop.counter}}</td>
+                      <td>{{p.name}}</td>
+                      <td>{{p.trees}}</td>
+                      <td>{{p.acres}}</td>
+                      <td>{{p.people}}</td>
+                      <td>
+                        <a href="{% url 'dashboard:agroforest-detail' p.id %}" style="cursor:pointer;font-size: 22px">
+                          <i class="fa fa-edit text-warning"> Edit</i>
+                        </a><br>
+                        <a href="{% url 'dashboard:delete-agroforest' p.id %}" style="cursor:pointer;font-size: 22px">
+                          <i class="fa fa-trash text-danger">Delete</i>
+                        </a>
+                      </td>
+                    </tr>
+                   {% endfor %}
+                </tbody>
+              </table>
+            </div>            
+          </div>          
+    </div>
+</div>
+{% endblock content %}
+
+
+{% block javascript %}
+    <script>
+        $(document).ready(function () {
+            $('#jobs-list').DataTable();
+        });
+    </script>
+{% endblock javascript %}
+    
+    
